@@ -16,57 +16,70 @@
     <link href="/assets/sets1/css/styles.css" rel="stylesheet" media="all">
     <link href="https://fonts.googleapis.com/css?family=Paytone+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 </head>
 
 <body data-ng-app="myPage" data-ng-controller="myPageCtrl">
-
     <div class="wrapper">
-
-        <header class="uk-small-hidden header" style=" position: absolute;">
-            <nav class="uk-navbar header-nav">
-                <div class="uk-container uk-container-center">
-                    <a href="/" class="uk-navbar-brand logo_link">
-
-                        <img class="uk-responsive-height logo" src="/assets/sets1/images/logo.png" alt="">
-                    </a>
-                    <div class="uk-navbar-flip uk-visible-large">
-                        <ul class="uk-navbar-nav header-nav-list">
-                            <li class="header_nav_list_item">
-                                <a class="link_features header_nav_list_item_link" style="font-weight: bold;"
-                                    href="/hire-tech-talent">HIRE TECH
-                                    TALENT</a>
-                            </li>
-                            <li class="header_nav_list_item">
-                                <a class="link_offer header_nav_list_item_link" style="font-weight: bold;"
-                                    href="/what-we-do">WHAT WE DO</a>
-                            </li>
-                            <li class="header_nav_list_item">
-                                <a class="link_pricing header_nav_list_item_link" style="font-weight: bold;"
-                                    href="/about">About Us</a>
-                            </li>
-                            <li class="header_nav_list_item">
-                                <a class="link_clients header_nav_list_item_link" style="font-weight: bold;"
-                                    href="/contact">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="uk-navbar-flip uk-hidden-large header_navbar_mobile_block">
-                        <div data-ng-click="toggleMobileNav($event)" class="uk-navbar-toggle header_navbar_mobile">
+            <header class="uk-small-hidden header">
+                    <nav class="uk-navbar header-nav">
+                        <div class="uk-container uk-container-center">
+                            <a href="/" class="uk-navbar-brand logo_link">
+        
+                                <img class="uk-responsive-height logo" src="/assets/sets1/images/logo.png">
+                            </a>
+                            <div class="uk-navbar-flip uk-visible-large">
+                                <ul class="uk-navbar-nav header-nav-list">
+                                    <li class="header_nav_list_item">
+                                        <a class="link_features header_nav_list_item_link"
+                                            href="/hire-analytics-talent">
+                                            <div class="nav-link">Hire Analytics Talents</div>
+                                        </a>
+                                    </li>
+                                    <li class="header_nav_list_item">
+                                        <a class="link_offer header_nav_list_item_link" 
+                                            href="/what-we-do">
+                                            <div class="nav-link">What We do</div>
+                                        </a>
+                                    </li>
+                                    <li class="header_nav_list_item">
+                                        <a class="link_pricing header_nav_list_item_link" 
+                                            href="/about">
+                                            <div class="nav-link">About Us</div>
+                                        </a>
+                                    </li>
+                                    <li class="header_nav_list_item">
+                                        <a class="link_clients header_nav_list_item_link"
+                                            href="/contact">
+                                            <div class="nav-link">Contact Us</div>
+                                        </a>
+                                    </li>
+                                    <li class="header_nav_list_item">
+                                        <a class="link_clients header_nav_list_item_link" href="/contact">
+                                            <div class="nav-btn">
+                                                Hire Talent
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="uk-navbar-flip uk-hidden-large header_navbar_mobile_block">
+                                <div data-ng-click="toggleMobileNav($event)" class="uk-navbar-toggle header_navbar_mobile">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
+                    </nav>
+            </header>
 
-        <section style="background: url(https://www.sofomo.com/old_site/images/imageHD.jpg) no-repeat 0 0;"
+        <section style="background: url(https://www.sofomo.com/old_site/images/imageHD.jpg) no-repeat 0 0; background-size: cover"
             class="uk-height-viewport uk-cover-background uk-position-relative uk-flex uk-flex-middle uk-overflow-hidden grey_overlay container">
             <div
                 class="uk-container uk-container-center uk-width-1-1 uk-text-center uk-position-relative container_block">
 
-                <div class="container_block" style="text-align: center;" id="sansSerifFont">
-                    <h1 class="uk-h1 container_title" id="sansSerifFont">Join Blytix </h1>
-                    <h2 class="uk-h2 container_subtitle" id="sansSerifFont"> </h2>
-                    <div class="container_description" id="sansSerifFont">
+                <div class="container_block" style="text-align: center;"  >
+                    <h1 class="uk-h1 container_title"  >Join Blytix </h1>
+                    <h2 class="uk-h2 container_subtitle"  > </h2>
+                    <div class="container_description"  >
                         Grow your skills and work with talented developers as <br> a member of Blytix’s small and
                         growing team.<br>
                     </div>
@@ -74,171 +87,250 @@
 
             </div>
         </section>
-
-
-        <section class="address section" style="padding: 33px 0 0px;">
-            <div class="uk-container uk-container-center uk-text-center" data-uk-scrollspy="{cls:'uk-active'}">
-                <div class="uk-grid uk-grid-large address_wrapper">
-                    <div class="uk-width-medium-1-3 animated">
-                        <div class="uk-margin-large-bottom address_item">
-                            <img src="https://www.sofomo.com/static/media/idea.dc3d0590.svg" alt="">
-                            <h4 class="address_title"
-                                style="font-size: 20px; color: rgb(74, 74, 74); font-weight: bold;">Blytix's Big Idea
-                            </h4>
-                            <div class="address_text" style="color: #4a4a4a">
-                                Blytix started with a big idea: to provide Africa’s top analytics talent with the
-                                opportunity to become key members of innovative local and international tech companies’
-                                IT teams.
+        <section class="description extend" style="padding: 33px 0 0px;">
+                <div class="uk-container uk-container-center uk-text-center" data-uk-scrollspy="{cls:'uk-active'}">
+                    <div class="uk-grid uk-grid-large address_wrapper">
+                        <div class="uk-width-medium-1-3 animated">
+                            <div class="uk-margin-large-bottom address_item">
+                                <img src="https://www.sofomo.com/static/media/idea.dc3d0590.svg" alt="">
+                                <h4 class="address_title"
+                                    style="font-size: 20px; color: rgb(74, 74, 74); font-weight: bold;">Blytix's Big Idea
+                                </h4>
+                                <div class="address_text" style="color: #4a4a4a">
+                                    Blytix started with a big idea: to provide Africa’s top analytics talent with the
+                                    opportunity to become key members of innovative local and international tech companies’
+                                    IT teams.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="uk-width-medium-1-3 animated">
-                        <div class="uk-margin-large-bottom address_item">
-                            <img src="https://www.sofomo.com/static/media/globe.7db3452b.svg" alt="">
-                            <h4 class="address_title"
-                                style="font-size: 20px; color: rgb(74, 74, 74); font-weight: bold;">Work For a Top Global
-                                Company</h4>
-                            <div class="address_text" style="color: #4a4a4a">
-                                Blytix is not a traditional IT shop. You will not work on multiple projects for
-                                different clients. Instead, you will work exclusively for a single local or international
-                                tech company and become an integral part of their IT group.
+                        <div class="uk-width-medium-1-3 animated">
+                            <div class="uk-margin-large-bottom address_item">
+                                <img src="https://www.sofomo.com/static/media/globe.7db3452b.svg" alt="">
+                                <h4 class="address_title"
+                                    style="font-size: 20px; color: rgb(74, 74, 74); font-weight: bold;">Work For a Top Global
+                                    Company</h4>
+                                <div class="address_text" style="color: #4a4a4a">
+                                    Blytix is not a traditional IT shop. You will not work on multiple projects for
+                                    different clients. Instead, you will work exclusively for a single local or international
+                                    tech company and become an integral part of their IT group.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="uk-width-medium-1-3 animated">
-                        <div class="uk-margin-large-bottom address_item">
-                            <img src="https://www.sofomo.com/static/media/love.7cc58e3f.svg" alt="">
-                            <h4 class="address_title"
-                                style="font-size: 20px; color: rgb(74, 74, 74); font-weight: bold;">Why You Will Love
-                                Blytix</h4>
-                            <div class="address_text" style="color: #4a4a4a" id="sansSerifFont">
-                                You will be a key contributor on a small, self-sufficient Blytix analytics team that
-                                functions like a mini-startup. Blytix is a place where you will constantly <b>learn new
-                                    technologies & grow your skills.</b>
+                        <div class="uk-width-medium-1-3 animated">
+                            <div class="uk-margin-large-bottom address_item">
+                                <img src="https://www.sofomo.com/static/media/love.7cc58e3f.svg" alt="">
+                                <h4 class="address_title"
+                                    style="font-size: 20px; color: rgb(74, 74, 74); font-weight: bold;">Why You Will Love
+                                    Blytix</h4>
+                                <div class="address_text" style="color: #4a4a4a" id="sansSerifFont">
+                                    You will be a key contributor on a small, self-sufficient Blytix analytics team that
+                                    functions like a mini-startup. Blytix is a place where you will constantly <b>learn new
+                                        technologies & grow your skills.</b>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section
-            style="padding-top: 60px; padding-left: 85px; padding-right: 85px; padding-bottom: 180px; background-color: #fafafa00">
-            <h3 style="color: black; font-size: 34px; letter-spacing: .6px; text-align: center; font-weight: 1000;">Frequently Asked
-                Questions</h3>
-            <button class="accordion">What's special about working at Blytix?</button>
-            <div class="panel">
-                <p style="margin-top: 15px;" id="sansSerifFont">
-                    At Blytix you will have the unique opportunity to work for innovative local and international tech
-                    companies. You will not work on long-term projects for multiple clients. Instead, you will work as
-                    part of a small Blytix offshore team that is based in Accra and be dedicated to one of Blytix's
-                    clients. You will be fully integrated into the client's product development group and feel like a
-                    member of their team. All contractors at Blytix have the opportunity to pursue on-demand job
-                    opportunities shared by our clients.
-                </p>
-            </div> <button class="accordion">How long is the Blytix hiring process?</button>
-            <div class="panel">
-                <p style="margin-top: 15px;" id="sansSerifFont">
-                    The Blytix admissions process includes an application, data aptitude tests, problem-solving
-                    evaluations, and an individual interview. Interviews are conducted over a video-conference using
-                    Zoom or in-person. Each stage is evaluated on core competencies and you must receive a minimum
-                    passing score to move onto the next stage. <br><br>
-
-                    Successful candidates go through our three-month intensive virtual and in-person training program
-                    where we sharpen your skills as an analytics professional and build a personalized profile to assess
-                    your working style before pairing you with a client. This training is at no upfront cost. There have
-                    been cases where extremely talented aspiring analytics professionals do not need to go through the
-                    entire program to be certified as a contractor. <br><br>
-
-                    We also help you cultivate soft skills and create your resume so it matches the client's
-                    requirements. You will then interview with the client, which will include a technical assessment.
-                    That's it! <br><br>
-
-                </p>
-            </div>
-
-            <button class="accordion">Will I be an employee of Blytix or the client?</button>
-            <div class="panel">
-                <p style="margin-top: 15px;" id="sansSerifFont">
-                    Neither! You are your own boss. This means you will be a contractor at Blytix but will be consulting
-                    with the client during their working hours.
-
-                </p>
-            </div>
-
-            <button class="accordion">What types of analytics professionals do you hire?</button>
-            <div class="panel">
-                <p style="margin-top: 15px;" id="sansSerifFont">
-                    We hire extremely talented people from quantitative and engineering disciplines. They do not only
-                    have strong quantitative and engineering skills but have demonstrated an ability to solve technical
-                    problems and want to constantly learn and grow their skills.
-
-                    See the jobs section below for our open positions. If you don't see the position you're looking for
-                    we would still love to hear from you. Contact us at <a href="#">info@blytix.com</a>.
-                </p>
-            </div>
-
-            <button class="accordion">Where will I work from?</button>
-            <div class="panel">
-                <p style="margin-top: 15px;" id="sansSerifFont">
-                    You will work from Blytix’s headquarters in Accra. We have a fun startup office and very flexible
-                    work schedule. Come visit us anytime.
-                </p>
-            </div>
-
-
-        </section>
-        <section class="description section" style="color: black; background: #ffffff">
-                <div class="uk-grid uk-grid-collapse">
-                    <div class="uk-width-large-1-4 uk-flex uk-flex-middle">
-                        <p style="margin-top: -50px; margin-left:20px; font-size: 15px" id="sansSerifFont"><span
-                                style="font-size: 17px;">About
-                                Us</span> <br> <br>
-                            We build & support your own talented, trusted, analytics team hosted out of Blytix’s
-                            headquarters in Accra, Ghana. info@blytix.com <br> <br>
-                        </p>
-                    </div>
-                    <div class="uk-width-large-1-4" style="font-size: 12px; text-align: left; line-height: 23px;">
-                        <div class="uk-navbar-flip uk-visible-large">
-                            <ul class="uk-navbar-nav header-nav-list">
-                                <span style="font-size: 17px;">Links</span><br> <br>
-                                <a style="color: black;" id="sansSerifFont" class="link_features header_nav_list_item_link"
-                                    href="/hire-tech-talent">Hire Tech TalentT</a> <br>
-    
-                                <a style="color: black;" id="sansSerifFont" class="link_offer header_nav_list_item_link"
-                                    href="/what-we-do">What We Do</a> <br>
-    
-                                <a style="color: black;" id="sansSerifFont" class="link_pricing header_nav_list_item_link"
-                                    href="/about">About Us</a> <br>
-    
-                                <a style="color: black;" id="sansSerifFont" class="link_clients header_nav_list_item_link"
-                                    href="/contact">Contact Us</a> <br>
-    
-                                <a style="color: black;" id="sansSerifFont" class="link_clients header_nav_list_item_link"
-                                    href="/faq">FAQ</a> <br>
-    
-                                <a style="color: black;" id="sansSerifFont" class="link_clients header_nav_list_item_link"
-                                    href="/career">Careers</a>
-    
-                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
-        <footer class="footer">
-            <div class="uk-container uk-container-center uk-text-center">
-                <ul class="uk-list social_list">
-                    <li class="social_list_item">
-                        <a class="uk-icon-twitter social_list_item_link" target="_blank"
-                            href="https://twitter.com/tryblytix"></a>
-                    </li>
-                    <li class="social_list_item">
-                        <a class="uk-icon-linkedin social_list_item_link" target="_blank"
-                            href="https://www.linkedin.com/company/blossomanalytics"></a>
-                    </li>
-                </ul>
-                <div class="footer_message">© 2019 Blytix. All Rights Reserved</div>
+        <section class="description blytix-bg-red ">
+            <h3 class="mid-size-text wwd-thin uk-text-center white">Frequently Asked Questions</h3>
+            <div class=" uk-container uk-grid uk-grid-large uk-margin-large-bottom" style="margin-left: auto; margin-right: auto">
+                <div class="uk-width-medium-1-2">
+                    <div class="faq-item">
+                        <div class="ion-ios-add icon"></div>
+                        <div class="accordion">What's special about working at Blytix?</div>
+                        <div class="panel">
+                            <p style="margin-top: 15px;"  >
+                                At Blytix you will have the unique opportunity to work for innovative local and international tech
+                                companies. You will not work on long-term projects for multiple clients. Instead, you will work as
+                                part of a small Blytix offshore team that is based in Accra and be dedicated to one of Blytix's
+                                clients. You will be fully integrated into the client's product development group and feel like a
+                                member of their team. All contractors at Blytix have the opportunity to pursue on-demand job
+                                opportunities shared by our clients.
+                            </p>
+                        </div> 
+                    </div>
+                    <div class="faq-item">
+                        <div class="ion-ios-add icon"></div>
+                        <div class="accordion">How long is the Blytix hiring process?</div>
+                        <div class="panel">
+                            <p style="margin-top: 15px;"  >
+                                The Blytix admissions process includes an application, data aptitude tests, problem-solving
+                                evaluations, and an individual interview. Interviews are conducted over a video-conference using
+                                Zoom or in-person. Each stage is evaluated on core competencies and you must receive a minimum
+                                passing score to move onto the next stage. <br><br>
+            
+                                Successful candidates go through our three-month intensive virtual and in-person training program
+                                where we sharpen your skills as an analytics professional and build a personalized profile to assess
+                                your working style before pairing you with a client. This training is at no upfront cost. There have
+                                been cases where extremely talented aspiring analytics professionals do not need to go through the
+                                entire program to be certified as a contractor. <br><br>
+            
+                                We also help you cultivate soft skills and create your resume so it matches the client's
+                                requirements. You will then interview with the client, which will include a technical assessment.
+                                That's it! <br><br>
+            
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="faq-item">
+                        <div class="ion-ios-add icon"></div>
+                        <div class="accordion">Will I be an employee of Blytix or the client?</div>
+                        <div class="panel">
+                            <p style="margin-top: 15px;"  >
+                                Neither! You are your own boss. This means you will be a contractor at Blytix but will be consulting
+                                with the client during their working hours.
+            
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-medium-1-2">
+                    <div class="faq-item"> 
+                        <div class="ion-ios-add icon"></div>
+                        <div class="accordion">What types of analytics professionals do you hire?</div>
+                        <div class="panel">
+                            <p style="margin-top: 15px;"  >
+                                We hire extremely talented people from quantitative and engineering disciplines. They do not only
+                                have strong quantitative and engineering skills but have demonstrated an ability to solve technical
+                                problems and want to constantly learn and grow their skills.
+        
+                                See the jobs section below for our open positions. If you don't see the position you're looking for
+                                we would still love to hear from you. Contact us at <a href="#">info@blytix.com</a>.
+                            </p>
+                            </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="ion-ios-add icon"></div>    
+                        <div class="accordion">Where will I work from?</div>
+                        <div class="panel">
+                            <p style="margin-top: 15px;"  >
+                                You will work from Blytix’s headquarters in Accra. We have a fun startup office and very flexible
+                                work schedule. Come visit us anytime.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </section>
+
+        <section class="description extend">
+            <h3 class="description_title mid-size-text uk-text-center">Featured Jobs</h3>
+            <h4 class="description-subtitle uk-text-center">Don’t see the position you’re looking for? We’d love to hear from you at info@blytix.com</h4>
+            <div class="uk-container uk-grid uk-grid-large uk-margin-large-top uk-margin-large-bottom" style="margin-left: auto; margin-right: auto">
+                <div class="uk-width-medium-1-2">
+                    <div>
+                        <div class="blytix-card uk-card uk-card-default uk-card-hover uk-card-body">
+                            <h3 class="uk-card-title">Data Engineer</h3>
+                            <p>
+                                You will be based in Ghana and part of Blytix, Our contract Data Engineers work closely with our clients and our Data Scientists in order to curate, transform and construct features which feed directly into our modelling approach.
+                            </p>
+                            <p>
+                                    This is a hybrid client-facing/technical role using state of the art technologies, whilst also being able to communicate complex intractable ideas to non-technical audiences. Collecting clear requirements is a key part of this role and will define the technical strategy the team employs on the study.
+                            </p>
+                            <div class="uk-button uk-border-rounded blytix-inverse-btn container_button_message">Apply Now</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-width-medium-1-2">
+                    <div>
+                        <div class="blytix-card uk-card uk-card-default uk-card-hover uk-card-body">
+                            <h3 class="uk-card-title">Data Scientist</h3>
+                            <p>As a Data Scientist at Blytix in Ghana, you will work with other Data Scientists and Data Engineers on interdisciplinary projects, using Maths, Stats and Machine Learning to derive structure and knowledge from raw data across various industry sectors. 
+                            </p>
+                            <p>
+                                    You will be based in Ghana and part of Blytix, Our Data Scientists work closely with our clients and our Data Engineers  in order to curate, transform and construct features which feed directly into our modelling approach.
+                            </p>
+                            <div class="uk-button uk-border-rounded blytix-inverse-btn container_button_message">Apply Now</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
+        </section>
+
+            <section class="address section">
+                    <div class="uk-container uk-container-center uk-text-center" data-uk-scrollspy="{cls:'uk-active'}">
+        
+                        <h3 class="uk-h3 animated section_title address_title" >Locations</h3>
+                        <div class="uk-grid uk-grid-large address_wrapper">
+                            <div class="uk-width-medium-1-2 animated">
+                                <div class="uk-margin-large-bottom address_item">
+                                    <h4 class="address_title">Ghana</h4>
+                                    <div class="address_text" style="margin-top: -24px;">
+                                        <br>Blossom Analytics
+                                        <br> 8 Volta Street
+                                        <br> Airport Residential Area
+                                        <br> Accra-Ghana
+                                        <br> Phone: +233 557 736 725
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uk-width-medium-1-2 animated">
+                                <div class="uk-margin-large-bottom address_item">
+                                    <h4 class="address_title">New York</h4>
+                                    <div class="address_text" style="margin-top: -24px;">
+                                        <br> Blossom Analytics
+                                        <br> 75 9th Ave. 6th Floor,
+                                        <br> New York, NY. 10011
+                                        <br> United States
+                                        <br> Phone: +1909 262-3387
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            <section class="section">
+                <div class="uk-grid uk-grid-collapse">
+                    <div class="uk-width-large-1-3 blytix-footer">
+                        <h3>Blytix</h3>
+                        <ul class="footer-navs">
+                            <li>
+                                <a href="/hire-tech-talent"><div>Privacy Policy</div></a>
+                            </li>
+    
+                            <li><a href="/what-we-do"><div>Terms of Service</div></a></li>
+                        </ul>
+                    </div>
+                    <div class="uk-width-large-1-3 blytix-footer">
+                            <h3>Links</h3>
+                            <ul class="footer-navs">
+                                <li>
+                                    <a href="/hire-tech-talent"><div>Hire Tech Talent</div></a>
+                                </li>
+        
+                                <li><a href="/what-we-do"><div>What We Do</div></a></li>
+    
+                                <li><a href="/about"><div>About Us</div></a></li>
+    
+                                <li><a href="/contact"><div>Contact Us</div></a></li>
+    
+                                <li><a href="/faq"><div>FAQ</div></a></li>
+    
+                                <li><a href="/career"><div>Careers</div></a></li>
+                            </ul>
+                    </div>
+                    <div class="uk-width-large-1-3 blytix-footer ">
+                        <h3>Follow Us</h3>
+                        <ul class="uk-list social_list">
+                            <li class="social_list_item">
+                                <a class="uk-icon-twitter social_list_item_link uk-text-center" target="_blank"
+                                    href="https://twitter.com/tryblytix"></a>
+                            </li>
+                            <li class="social_list_item">
+                                <a class="uk-icon-linkedin social_list_item_link uk-text-center" target="_blank"
+                                    href="https://www.linkedin.com/company/blossomanalytics"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="uk-width-large-1-1 blytix-footer ">
+                        <div class="uk-container uk-container-center uk-text-center">
+                            <div class="">© 2019 Blytix. All Rights Reserved</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         <div data-ng-click="scrollTop()" class="scroll_top"></div>
 
@@ -359,31 +451,62 @@
             letter-spacing: .4px;
             color: #404040;
         }
-    </style>
-    <script>
-        var acc = document.getElementsByClassName("accordion");
-        var i;
-
-        for (i = 0; i < acc.length; i++) {
-            acc[i].addEventListener("click", function () {
-                /* Toggle between adding and removing the "active" class,
-                to highlight the button that controls the panel */
-                this.classList.toggle("active");
-
-                /* Toggle between hiding and showing the active panel */
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-            });
+        .faq-item{
+            margin-top: 30px;
+            position: relative;
         }
-    </script>
+        .faq-item .accordion{
+            background-color: transparent;
+            color: white;
+            font-family: Proxima-thin;
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+        .faq-item .panel{
+            margin-left: 10px;
+            display: none;
+            opacity: 0;
+            transition: display .1s ease-in-out, opacity .3s ease-in-out;
+            background-color: transparent;
+        }
+        .faq-item .panel.active{
+            display: block;
+            opacity: 1;
+
+        }
+        .faq-item .panel p{
+            font-family: Proxima-thin;
+            color: white;
+            border-left: 3px solid white;
+            padding-left: 17px;
+        }
+        .faq-item .icon{
+            font-size: 1.5em;
+            color: white;
+            position: absolute;
+            top: 2px;
+            width: 25px;
+            height: 25px;
+            border: 2px solid white;
+            line-height: 20px;
+            border-radius: 50%;
+            text-align: center;
+        }
+    </style>
     <script type="text/javascript" src="/assets/sets1/js/angular.min.js"></script>
     <script type="text/javascript" src="/assets/sets1/js/ngTouch.min.js"></script>
     <script type="text/javascript" src="/assets/sets1/js/jquery.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBj7cR7j4zbZLwiKDV35BJ6VSASioV0n_8"></script>
+    <script type="text/javascript" src="/assets/sets1/js/main.js"></script>
+    <script>
+        var acc = $(".accordion").click(function(){
+            $(".accordion").siblings('.panel').removeClass('active')
+            $(this).siblings('.panel').toggleClass('active')
+            var icon = $(this).siblings('.icon')
+            var allIcon = $(acc).siblings('.icon')
+            allIcon.removeClass('ion-ios-remove')
+            icon.addClass('ion-ios-remove')
+        })
+    </script>
     <script type="text/javascript" src="/assets/sets1/js/uikit.min.js"></script>
     <script type="text/javascript" src="/assets/sets1/js/slideshow.min.js"></script>
     <script type="text/javascript" src="/assets/sets1/js/slideshow-fx.min.js"></script>
