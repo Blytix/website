@@ -28,9 +28,19 @@ app.use('/career', async (req, res, next) => {
 app.use('/hire-analytics-talent', async (req, res, next) => {
     res.render('hire_analytics_talent')
 })
+
 app.use('/what-we-do', async (req, res, next) => {
     res.render('what_we_do')
 })
+
+app.use('/privacy-policy', async (req, res, next) => {
+    res.render('privacy')
+})
+
+app.use('/terms-of-service', async (req, res, next) => {
+    res.render('terms')
+})
+
 app.use('/contact', async (req, res, next) => {
     _message = ''
     if (req.method == 'POST') {

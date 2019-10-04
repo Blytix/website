@@ -2412,3 +2412,15 @@ p {
 	font-family: Proxima-thin;
 	font-size: 1em;
 }
+.header-banner{
+	height: 350px;
+	background-color:  rgba(2, 0, 36, 0.966)
+}
+
+.header-banner h3{
+	font-family: Proxima-bold;
+	font-size: 2em;
+	text-align: center;
+	color: white;
+	line-height: 350px;
+}
