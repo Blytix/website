@@ -11,10 +11,13 @@ function invertNavbar(){
     var vh =  Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     var headerNav = document.getElementsByClassName('header-nav')
     headerNav = headerNav[0]
-    if(window.scrollY >= vh){
-        headerNav.classList.add("inverted")
-    }else{
-        headerNav.classList.remove("inverted")
+    var isFixed = headerNav.classList.contains('fixed')
+    if(!isFixed){
+        if(window.scrollY >= vh){
+            headerNav.classList.add("inverted")
+        }else{
+            headerNav.classList.remove("inverted")
+        }
     }
 }
 

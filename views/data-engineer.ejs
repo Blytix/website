@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html class="particles_effect" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<title>Blytix</title>
+	<link rel="shortcut icon" href="/assets/sets1/images/logo.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/assets/sets1/images/apple-touch-icon-57.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/sets1/images/apple-touch-icon-72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/sets1/images/apple-touch-icon-114.png">
+	<link href="/assets/sets1/css/uikit.css" rel="stylesheet" media="all">
+	<link href="/assets/sets1/css/styles.css" rel="stylesheet" media="all">
+	<link href="https://fonts.googleapis.com/css?family=Paytone+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body data-ng-app="myPage" data-ng-controller="myPageCtrl">
+
+	<div class="wrapper">
+            <%- include("partials/header", {navbar: true, anchor: false}) %>  
+        <section class="header-banner career">
+            <div class="overlay"></div>
+            <div class="header-content">
+                <h3>Data Engineer</h3>
+                <h5>Send your resume to <a>info@blytix.com </a></h5>
+            </div>
+        </section>
+
+        <section class="description extend career">
+                <div class="uk-container uk-margin" style="margin-left: auto; margin-right: auto;">
+                    <p>
+                        You will be based in Ghana and part of Blytix, Our Data Engineers work closely with our clients and our 
+                        Data Scientists in order to curate, transform and construct features which feed directly into our modelling approach.                            
+                    </p>
+                    <p>
+                        This is a hybrid client-facing/technical role using state of the art technologies, whilst also being able to communicate complex intractable ideas to non-technical audiences. Collecting clear 
+                        requirements is a key part of this role and will define the technical strategy the team employs on the study.
+                    </p>
+                    <h4>What You’ll Be Doing</h4>
+                    <p class="bold">
+                        You will work in multi-disciplinary environments harnessing data to provide real-world impact for organisations globally.
+                        You will influence many of the recommendations our clients need to positively change their businesses and enhance performance.
+                    </p>
+                    <p class="bold">Role responsibilities</p>
+                    <ul>
+                        <li>Work with our clients to model their data landscape, obtain data extracts and define secure data exchange approaches</li>
+                        <li>Acquire, ingest, and process data from multiple sources and systems into Big Data platforms </li>
+                        <li>Understanding, assessing and mapping the data landscape.</li>
+                        <li>Maintaining our Information Security standards on the engagement.     </li>
+                        <li>Collaborate with our data scientists to map data fields to hypotheses and curate, wrangle, and prepare data for use in their advanced analytical models.</li>
+                        <li>Defining the technology stack to be provisioned by our infrastructure team.</li>
+                        <li>Building modular pipeline to construct features and modelling tables.</li>
+                        <li>Use new and creative techniques to deliver impact for our clients as well as internal R&D projects.</li>
+                    </ul>
+                    <h4>Who You Are (Experience & Skills)</h4>
+                    <p class="bold">You are a highly collaborative individual who is capable of laying aside your own agenda, listening to and learning from colleagues,
+                         challenging thoughtfully and prioritising impact. You search for ways to improve things and work collaboratively with colleagues. You believe in iterative change, experimenting with new approaches, learning and improving to move forward quickly. Trust between colleagues is paramount here – you are an individual who can always be trusted to work in the best interests of all colleagues and to achieve
+                        the best outcome for Blytix and our clients. You are naturally enthusiastic and enjoy sharing your passion with others.</p>
+                    <h4>What You’ll Learn</h4>
+                    <ul>
+                        <li>How successful projects on real world problems across a variety of industries are 
+                            completed through referencing past deliveries of end to end  pipelines.</li>
+                        <li>
+                            Build products alongside the Core engineering team of our clients and evolve the engineering 
+                            process to scale with data, handling complex problems and advanced client situations.
+                        </li>
+                        <li>Be focused on the wrangling, clean-up and transformation of data by working alongside 
+                            the Data Science team which focuses on modelling the data.</li>
+                        <li>Using new technologies and problem-solving skills in a multicultural and creative environment. </li>
+                    </ul>
+                    <h4>How To Apply</h4>
+                    <p> To apply email info@blytix.com with the subject line “Data Engineer”.
+                        When applying please provide a resume and any links to your technical 
+                        blog, github/bitbucket and other reviewable code examples.</p>
+                        
+                </div>
+            </section>
+
+
+        <% include partials/footer %>
+
+	</div>
+
+	<div id="mobile_nav" class="uk-offcanvas">
+		<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+			<ul class="uk-nav uk-nav-offcanvas">
+				<li class="">
+					<a data-ng-click="scrollNav($event)" class="link_features" href="#">What We Do</a>
+				</li>
+				<li class="">
+					<a data-ng-click="scrollNav($event)" class="link_offer" href="#">Your Developers</a>
+				</li>
+				<li class="">
+					<a data-ng-click="scrollNav($event)" class="link_pricing" href="about.html">About Us</a>
+				</li>
+				<li class="">
+					<a data-ng-click="scrollNav($event)" class="link_clients" href="contact.html">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="modal_subscribe" class="uk-modal subscribe_window">
+		<div class="uk-modal-dialog uk-text-center uk-border-rounded">
+			<h4 class="uk-h4 uk-text-contrast subscribe_window_title">Subscribe to our newsletter</h4>
+
+			<form data-ng-submit="mailchimpForm" class="uk-form form_sign_in" autocomplete="off">
+				<div class="uk-grid uk-grid-collapse uk-container-center uk-width-medium-3-4">
+					<div class="uk-width-medium-3-4 uk-margin-bottom">
+						<input name="email" class="uk-width-1-1 uk-text-contrast form_input" type="email"
+							placeholder="Enter your e-mail">
+					</div>
+					<div class="uk-width-medium-1-4 uk-margin-bottom">
+						<button class="uk-width-1-1 uk-button button_custom_green form_button"
+							type="submit">Subscribe</button>
+					</div>
+				</div>
+				<div class="response_wrapper">
+
+					<div class="success">E-mail has been added successfully.</div>
+					<div class="success_response"></div>
+
+					<div class="error">E-mail must be valid and message must be longer than 1 character.</div>
+					<div class="error_response"></div>
+				</div>
+			</form>
+			<a class="uk-modal-close uk-close uk-border-circle subscribe_window_close"></a>
+		</div>
+    </div>
+    
+    <% include partials/modal %>
+
+
+	<style>
+        .career {
+            background-color: white !important;
+        }
+        .career p{
+            font-family: Proxima-thin;
+            font-size: 1.1em;
+            line-height: 1.8em;
+        }
+
+        .career p.bold{
+            font-family: Proxima;
+        }
+
+        .career h4{
+            font-size: 1.7em;
+            font-family: Proxima-bold;
+            margin-top: 35px;
+        }
+
+        .career h5{
+            font-size: 1.3em;
+            font-family: Proxima-bold;
+        }
+
+        .career ul li{
+            font-size: 1.15em;
+            font-family: Proxima;
+            margin: 15px;
+        }
+	</style>
+	<% include partials/scripts %>
+</html>

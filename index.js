@@ -21,6 +21,14 @@ app.use('/faq', async (req, res, next) => {
     res.render('faq')
 })
 
+app.use('/career/data-engineer', async (req, res, next) => {
+    res.render('data-engineer')
+})
+
+app.use('/career/data-scientist', async (req, res, next) => {
+    res.render('data-scientist')
+})
+ 
 app.use('/career', async (req, res, next) => {
     res.render('career')
 })

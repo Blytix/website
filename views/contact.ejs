@@ -21,56 +21,7 @@
 
 	<div class="wrapper">
 
-		<header class="uk-small-hidden header">
-			<nav class="uk-navbar header-nav">
-				<div class="uk-container uk-container-center">
-					<a href="/" class="uk-navbar-brand logo_link">
-
-						<img class="uk-responsive-height logo" src="/assets/sets1/images/logo.png">
-					</a>
-					<div class="uk-navbar-flip uk-visible-large">
-						<ul class="uk-navbar-nav header-nav-list">
-							<li class="header_nav_list_item">
-								<a class="link_features header_nav_list_item_link"
-									href="/hire-analytics-talent">
-									<div class="nav-link">Hire Analytics Talents</div>
-								</a>
-							</li>
-							<li class="header_nav_list_item">
-								<a class="link_offer header_nav_list_item_link" 
-									href="/what-we-do">
-									<div class="nav-link">What We do</div>
-								</a>
-							</li>
-							<li class="header_nav_list_item">
-								<a class="link_pricing header_nav_list_item_link" 
-									href="/about">
-									<div class="nav-link">About Us</div>
-								</a>
-							</li>
-							<li class="header_nav_list_item">
-								<a class="link_clients header_nav_list_item_link"
-									href="/contact">
-									<div class="nav-link">Contact Us</div>
-								</a>
-							</li>
-							<li class="header_nav_list_item">
-								<a class="link_clients header_nav_list_item_link" href="/contact">
-									<div class="nav-btn">
-										Hire Talent
-									</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="uk-navbar-flip uk-hidden-large header_navbar_mobile_block">
-						<div data-ng-click="toggleMobileNav($event)" class="uk-navbar-toggle header_navbar_mobile">
-						</div>
-					</div>
-				</div>
-			</nav>
-		</header>
-
+			<%- include("partials/header", {navbar: true, anchor: false}) %>  
 		<section
 			class="uk-height-viewport uk-cover-background uk-position-relative uk-flex uk-flex-middle uk-overflow-hidden grey_overlay container"
 			style="background-image: url('/assets/sets1/images/contact.jpg')">
