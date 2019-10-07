@@ -29,7 +29,7 @@
                 class="uk-container uk-container-center uk-width-1-1 uk-text-center uk-position-relative container_block">
 
                 <div class="container_block" style="text-align: center;"  >
-                    <h1 class="uk-h1 container_title"  >Not Just Forward-Thinking — Future-Thinking.
+                    <h1 class="uk-h1 container_title"  style="font-size: 48px" >Not Just Forward-Thinking — Future-Thinking.
                     </h1>
                     <h2 class="uk-h2 container_subtitle"  ></h2>
                     <div class="container_description" id="sansSerifFont1">
@@ -42,7 +42,7 @@
         <section class="address section" style="padding: 35px 0 35px; line-height: 24px;">
             <div class="uk-container uk-container-center uk-text-center" data-uk-scrollspy="{cls:'uk-active'}">
                 <h4  
-                    style="text-align:center; color: black; font-family: Helvetica Neue, Helvetica, Arial, sans-serif; font-size: 30px;">
+                    style="text-align:center; color: black;"class="mid-size-text" >
                     Advancing Talent and Technologies.</h4>
                 <div class="uk-grid uk-grid-large address_wrapper">
 
@@ -55,46 +55,38 @@
             </div>
         </section>
 
-        <section class="description description_secondary section"
-            style="padding-top: 55px; background-color: #e3eaed; background-size: cover; background-image: url(/assets/sets1/images/about_second.jpeg)"
+        <section class="description description_secondary section uk-position-relative"
+            style="background-color: #e3eaed; background-size: cover; background-image: url(/assets/sets1/images/about_second.jpeg)"
              >
-            <div class="uk-grid uk-grid-collapse">
-                <div class="uk-width-large-1-1 uk-flex uk-flex-middle" >
-                    <div class="uk-container description_block" data-uk-scrollspy="{cls:'uk-active'}"
-                        style="text-align: left;">
-                    </div>
-
-                </div>
+            <div class="uk-grid uk-grid-collapse uk-position-relative uk-padding-large">
                 <div class="uk-width-large-1-2 uk-flex uk-flex-middle">
                     <div class="uk-container description_block" data-uk-scrollspy="{cls:'uk-active'}">
                         <!-- <img src="https://www.sofomo.com/static/media/rafal.b378af63.png" alt=""> -->
                     </div>
                 </div>
-                <div class="uk-width-large-1-2 uk-flex uk-flex-middle">
+                <div class="uk-width-large-1-2 uk-flex uk-flex-middle about-content">
                     <div class="uk-container description_block" data-uk-scrollspy="{cls:'uk-active'}"
                         style="height: 500px;">
-                        <h3 class="uk-h3 uk-margin-large-bottom animated description_title deco mid-size-text red">
+                        <h3 class="uk-h3 uk-margin-large-bottom animated description_title deco mid-size-text white">
                                 Our Principles Define Us and Our Work</h3>
                             
-                        <h3 class="uk-h3 uk-margin-large-bottom animated wwd-normal small-size-text red">Our
+                        <h3 class="uk-h3 uk-margin-large-bottom animated wwd-normal small-size-text white">Our
                             Mission</h3>
-                        <p class="animated description_text wwd-thin">
+                        <p class="animated description_text wwd-thin white">
                             To connect Africa's top talent to the global economy by providing meaningful work.
                         </p>
-                        <h3 class="uk-h3 uk-margin-large-bottom animated deco wwd-normal small-size-text red">
+                        <h3 class="uk-h3 uk-margin-large-bottom animated deco wwd-normal small-size-text white">
                             Our Vision</h3>
-                        <p class="animated description_text wwd-thin">
-                            To unite every African youth who can realize their full potential and connect each of them
-                            to diverse economic opportunities globally. We believe the best algorithms and tools will be
-                            built by those who are exposed to different market conditions, inspired by their work, and
-                            choose their work environment--in the company of equally passionate colleagues. By leveling
-                            the playing field, we anticipate experiencing a world with less disparity and more
-                            prosperity.
+                        <p class="animated description_text wwd-thin white">
+                            To inspire African Youth to realize their full potential and connect them to diverse economic opportunities around the world. We believe that 
+                            the best algorithms and tools will be built by those who are exposed to different market conditions, who find inspiration in their work, and 
+                            who seek to collaborate with equally passionate colleagues in an exciting career landscape. By leveling the playing field, 
+                            we aspire to shape a world with less disparity and more prosperity.
                         </p>
 
                     </div>
                 </div>
-
+                <div class="about-overlay"></div>
             </div>
         </section>
 
@@ -172,19 +164,19 @@
     <% include partials/modal %>
 
     <style>
-        #sectionHead {
-            font-family: 'Paytone One', sans-serif;
-            font-size: 22px;
-            line-height: 27px;
-        }
-
-        #sansSerifFont {
-            font-family: 'Proxima Nova', Tahoma, sans-serif;
-        }
-
-        #sansSerifFont1 {
-            font-family: 'Work Sans', sans-serif;
-        }
+       .about-overlay{
+           position: absolute;
+           top: 0;
+           left: 0;
+           background-color: rgba(0, 0, 0, 0.479);
+           width: 100%;
+           height: 100%;
+           z-index: 3;
+       }
+       .about-content{
+            position: relative;
+            z-index: 5;
+       }
     </style>
 
     <% include partials/scripts %>

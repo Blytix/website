@@ -240,7 +240,7 @@ p {
 /******* Header *******/
 
 .header {
-	position: fixed;
+	position: absolute;
 	left: 0;
 	right: 0;
 	z-index: 10;
@@ -2344,12 +2344,19 @@ p {
 .small-size-text.red{
 	color:  #ce1126 !important;
 }
+.small-size-text.white{
+	color:  #fff !important;
+}
+.description_text.white{
+	color: white;
+}
 .wwd-normal{
 	font-family: Proxima;
 }
 
 .wwd-thin{
 	font-family: Proxima-thin !important;
+	line-height: 29px;
 }
 .header-page-anchor{
 	background-color: white;
