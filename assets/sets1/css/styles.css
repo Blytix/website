@@ -398,8 +398,7 @@ p {
 }
 .container_description {
 	position: relative;
-	/* max-width: 700px; */
-	margin: 0 auto;
+	max-width: 700px;
 	font-size: 18px;
 	line-height: 23px;
     font-family: Proxima-thin, sans-serif;
@@ -562,7 +561,7 @@ p {
 	border: 0;
 }
 .uk-margin-large-bottom.description_title {
-	margin-bottom: 30px !important;
+	margin-bottom: 0px !important;
 	font-family: Proxima-bold !important;
 	font-size: 3em;
 }
@@ -1870,6 +1869,9 @@ p {
 	}
 }
 @media screen and (max-width: 959px) {
+	.about-image-text{
+		color: #fafafa;
+	}
 	.header-banner.career .header-content{
 		width: 90%;
 		left: 0;
@@ -1970,7 +1972,8 @@ p {
 		margin: 0 auto;
 	}
 	.address_title{
-		display: block
+		display: block;
+		margin-left: 20px;
 	}
 	h3, 
 	.uk-h3 {
@@ -2256,10 +2259,10 @@ p {
 	position: absolute;
 	z-index: 10;
 	width: 100%;
-	height: 100%;
+	height: calc( 100% + 100px);
 	background: #200122d3; /* fallback for old browsers */
-  	background: -webkit-linear-gradient(to right, #200122, #ff4b4b73); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #200122, #ff4b4b73);
+  	background: -webkit-linear-gradient(to right, #200122, #ff4b4bc2); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #200122, #ff4b4bc2);
 	z-index: 3;
 	top: 0;
 }
@@ -2657,4 +2660,12 @@ p {
 }
 .wwd-description{
 	padding: 20px
+}
+.cv-upload-box > div{
+	padding: 10px;
+    font-size: 0.9em;
+    background-color: #d8d8d8;
+    border: 2px solid #12c312;
+    display: inline-block;
+    border-radius: 2px;
 }

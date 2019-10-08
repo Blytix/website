@@ -15,7 +15,7 @@
                                         placeholder="Name">
                                 </div>
                                 <div class="uk-width-small-1-1 uk-margin-bottom">
-                                    <input name="name" class="uk-width-1-1 uk-text-contrast form_input" required type="text"
+                                    <input name="company" class="uk-width-1-1 uk-text-contrast form_input" required type="text"
                                         placeholder="Company">
                                 </div>
                                 <div class="uk-width-small-1-1 uk-margin-bottom">
@@ -23,11 +23,11 @@
                                         placeholder="E-mail">
                                 </div>
                                 <div class="uk-width-small-1-1 uk-margin-bottom">
-                                    <input name="subject" class="uk-width-1-1 uk-text-contrast form_input" required
+                                    <input name="phone" class="uk-width-1-1 uk-text-contrast form_input" required
                                         placeholder="Phone Number">
                                 </div>
                                 <div class="uk-width-small-1-1 uk-margin-bottom" >
-                                        <select name="subject" class="uk-width-1-1 uk-text-contrast form_input" required >
+                                        <select name="professionals_type" class="uk-width-1-1 uk-text-contrast form_input" required >
                                             <option style="color: black" value="On-demand analytics professional">On-demand analytics professional</option>
                                             <option style="color: black" value="Full time analytics professional">Full time analytics professional</option>
                                             <option style="color: black" value="Team of analytics professionals">Team of analytics professionals</option>
@@ -53,3 +53,51 @@
             </div>
         </div>
     </div>
+
+    <div class="modal micromodal-bounce" id="modal-2" aria-hidden="true">
+            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+                <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title" aria-describedby="modal-1-content">
+                    <div role="document">
+                        <header class="modal__header">
+                          <h3 class="modal__title" id="modal-1-title">Join Us</h3>
+                          <button class="modal__close" aria-label="Close modal" aria-controls="modal__container1" data-micromodal-close></button>
+                        </header>
+                        <main class="modal__content" id="modal-1-content">
+                            <form action="/contact" method="POST" class="uk-form form_send_message" autocomplete="off">
+                                <div
+                                    class="uk-grid uk-grid-small uk-container-center uk-margin-bottom">
+                                    <div class="uk-width-small-1-1 uk-margin-bottom">
+                                        <input name="name" class="uk-width-1-1 uk-text-contrast form_input" required type="text"
+                                            placeholder="Name">
+                                    </div>
+                                    <div class="uk-width-small-1-1 uk-margin-bottom">
+                                        <input name="email" class="uk-width-1-1 uk-text-contrast form_input" required type="text"
+                                            placeholder="E-mail">
+                                    </div>
+                                    <div class="uk-width-small-1-1 uk-margin-bottom">
+                                            <input name="country" class="uk-width-1-1 uk-text-contrast form_input" required type="text"
+                                                placeholder="Country">
+                                        </div>
+                                    <div class="uk-width-small-1-1 uk-margin-bottom">
+                                        <input name="phone" class="uk-width-1-1 uk-text-contrast form_input" required type="text"
+                                            placeholder="Phone Number">
+                                    </div>
+                                    <div class="uk-width-small-1-1 uk-margin-bottom">
+                                        <input name="linkedin" placeholder="LinkedIn Profile" class="uk-width-1-1 uk-text-contrast form_input" required>
+                                    </div>
+                                    <div class="uk-width-small-1-1 uk-margin-bottom">
+                                        <input type="file" id="cv_box" required style="display: none">
+                                        <label for="cv_box" class="cv-upload-box">
+                                            <div><i class="ion-ios-attach"></i> ATTACH RESUME / CV</div>
+                                        </label>
+                                    </div>
+                                    <div class="uk-margin-bottom uk-width-1-1">
+                                        <button class="uk-button button_custom_green blytix-inverse-btn form_button" type="submit">Contact Us</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
