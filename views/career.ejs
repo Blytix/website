@@ -39,12 +39,13 @@
             </div>
         </section>
         <section class="description extend " >
+            <div class="section-content">
                 <div class="uk-container uk-container-center" data-uk-scrollspy="{cls:'uk-active'}">
                     <div class="uk-grid uk-grid-large uk-margin-large-bottom">
                         <div class="uk-width-medium-1-3 animated">
                             <div class="uk-margin-large-bottom address_item">
                                 <img src="https://www.sofomo.com/static/media/idea.dc3d0590.svg" alt="">
-                                <h4 class="address_title mid-size-text" >Blytix's Transformational <br> Idea
+                                <h4 class="mid-size-text caption" >Blytix's Transformational <br> Idea
                                 </h4>
                             </div>
                             <div class="address_content">
@@ -58,7 +59,7 @@
                         <div class="uk-width-medium-1-3 animated">
                             <div class="uk-margin-large-bottom address_item">
                                 <img src="https://www.sofomo.com/static/media/globe.7db3452b.svg" alt="">
-                                <h4 class="address_title mid-size-text" >Work For a Top Global Company</h4>
+                                <h4 class="mid-size-text caption" >Work For a Top Global Company</h4>
                             </div>
                             <div class="address_content">
                                 <p class="address_text" style="color: #4a4a4a">
@@ -71,7 +72,7 @@
                         <div class="uk-width-medium-1-3 animated">
                             <div class="uk-margin-large-bottom address_item">
                                 <img src="https://www.sofomo.com/static/media/love.7cc58e3f.svg" alt="">
-                                <h4 class="address_title mid-size-text" >Why You Will Love <br> Blytix</h4>
+                                <h4 class=" mid-size-text caption" >Why You Will Love <br> Blytix</h4>
                             </div>
                             <div class="address-contenet">
                                 <p class="address_text" style="color: #4a4a4a">
@@ -83,7 +84,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
         <section class="description blytix-bg-red ">
             <h3 class="mid-size-text wwd-thin uk-text-center white">Frequently Asked Questions</h3>
             <div class=" uk-container uk-grid uk-grid-large uk-margin-large-bottom" style="margin-left: auto; margin-right: auto">
@@ -209,25 +211,6 @@
 
     </div>
 
-    <div id="mobile_nav" class="uk-offcanvas">
-        <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-            <ul class="uk-nav uk-nav-offcanvas">
-                <li class="">
-                    <a data-ng-click="scrollNav($event)" class="link_features" href="#">What We Do</a>
-                </li>
-                <li class="">
-                    <a data-ng-click="scrollNav($event)" class="link_offer" href="#">Your Developers</a>
-                </li>
-                <li class="">
-                    <a data-ng-click="scrollNav($event)" class="link_pricing" href="about.html">About Us</a>
-                </li>
-                <li class="">
-                    <a data-ng-click="scrollNav($event)" class="link_clients" href="contact.html">Contact Us</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
     <div id="modal_subscribe" class="uk-modal subscribe_window">
         <div class="uk-modal-dialog uk-text-center uk-border-rounded">
             <h4 class="uk-h4 uk-text-contrast subscribe_window_title">Subscribe to our newsletter</h4>
@@ -277,16 +260,6 @@
             letter-spacing: .4px;
             color: #404040;
         }
-
-        #sectionHead {
-            font-family: 'Paytone One', sans-serif;
-            font-size: 60px;
-            line-height: 65px;
-        }
-
-        #sansSerifFont {
-            font-family: 'Work Sans', sans-serif;
-        }
     </style>
     <style>
         .accordion {
@@ -294,6 +267,7 @@
             color: #444;
             cursor: pointer;
             padding: 18px;
+            padding-top: 0px;
             width: 100%;
             text-align: left;
             border: none;
@@ -334,8 +308,9 @@
             background-color: transparent;
             color: white;
             font-family: Proxima-thin;
-            padding-left: 30px;
-            margin-left: 20px;
+            margin-left: 27px;
+            line-height: 27px;
+            box-sizing: border-box;
         }
         .faq-item .panel{
             margin-left: 10px;
@@ -371,9 +346,10 @@
             margin-bottom: 0px !important;
             display: flex
         }
-        .address_item .address_title{
+        .address_item .caption{
             font-size: 1.5em !important;
-            vertical-align: baseline
+            vertical-align: baseline;
+            font-family: Proxima-bold;
         }
         .address_item img{
             margin-right: 10px;

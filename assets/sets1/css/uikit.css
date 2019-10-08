@@ -7365,9 +7365,10 @@ a.uk-thumbnail:focus {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
     z-index: 1001;
-    width: 270px;
+    width: 100%;
+    height: 100%;
     max-width: 100%;
-    background: #333;
+    background: rgba(23, 16, 29, 0.973);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -7387,6 +7388,20 @@ a.uk-thumbnail:focus {
     transform: translateX(100%)
 }
 
+.uk-nav-offcanvas{
+    margin-top: 100px;
+}
+.uk-nav-offcanvas li{
+    list-style: none;
+    text-decoration: none
+}
+.uk-nav-offcanvas li a{
+    font-size: 1em;
+    color: white;
+}
+.uk-nav-offcanvas .nav-link{
+    line-height: 15px;
+}
 .uk-offcanvas .uk-panel {
     margin: 20px 15px;
     color: #777

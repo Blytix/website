@@ -29,7 +29,7 @@ app.use('/career/data-scientist', async (req, res, next) => {
     res.render('data-scientist')
 })
  
-app.use('/career', async (req, res, next) => {
+app.use('/careers', async (req, res, next) => {
     res.render('career')
 })
 

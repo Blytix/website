@@ -316,6 +316,55 @@ p {
 	font-family: Proxima-bold
 }
 
+.header-banner.career{
+	height: 400px;
+	overflow: hidden;
+	background-color: white;
+	background: url('https://image.ibb.co/hC3ATG/w_dialog.jpg') no-repeat 0 0;
+	background-size: cover;
+	position: relative;
+	z-index: 5
+}
+.header-banner.career .overlay{
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.603);
+	width: 100%;
+	height: 100%;
+}
+.header-banner.career .header-content{
+	background-color: white;
+	padding: 20px;
+	width: 400px;
+	height: 180px;
+	margin: 0 auto;
+	border-radius: 2px;
+	position: absolute;
+	z-index: 4;
+	left: 39%;
+	top: 145px;
+}
+
+.header-banner.career .header-content h3{
+	font-family: Proxima-bold;
+	font-size: 2.8em;
+	color: slategrey;
+	line-height: 80px;
+}
+
+.header-banner.career .header-content h5{
+	font-family: Proxima-thin;
+	font-size: 1.4em;
+	color: silver;
+	text-align: center;
+}
+
+.header-banner.career .header-content h5 a{
+	color: rgb(50, 156, 255);
+	font-weight: bold;
+}
+
+
 /******* Container section *******/
 
 .container_block {
@@ -342,7 +391,7 @@ p {
 	position: relative;
 	color: #fff;
 	font-family: Proxima-bold, sans-serif;
-	font-size: 60px;
+	font-size: 50px;
 	line-height: 67px;
     font-weight: 600;
 	/* text-shadow: 1px 1px 30px rgba(0,0,0,0.3); */
@@ -1293,6 +1342,21 @@ p {
 	display: inline-block
 }
 
+.header-nav .logo{
+	height: 100px;
+	transition: all .3s ease-in-out;
+}
+
+.client-logo{
+	width: 200px;
+}
+.client-logo img{
+	width: 100%;
+}
+
+.styled-bullet{
+	margin-top: 120px
+}
 /******* Map *******/
 
 .map {
@@ -1732,6 +1796,7 @@ p {
 		height: 280px;
 	}
 }
+
 @media screen and (max-width: 1440px) {
 	.uk-navbar-content, 
 	.uk-navbar-brand, 
@@ -1805,6 +1870,13 @@ p {
 	}
 }
 @media screen and (max-width: 959px) {
+	.header-banner.career .header-content{
+		width: 90%;
+		left: 0;
+	}
+	.styled-bullet{
+		margin-top: 0;
+	}
 	.header.active .logo_link {
 		margin-top: 0;
 	}
@@ -1820,15 +1892,21 @@ p {
 	.description {
 		padding-bottom: 70px;
 	}
+	.description.hire{
+		padding-bottom: 0;
+	}
+	.description.image{
+		padding-bottom: 0;
+	}
 	.description_secondary {
-		padding-top: 70px;
+		padding-top: 20px;
 		padding-bottom: 0;
 		border-top: 1px solid #ccc;
 		background: #fff;
 	}
 	.description_block {
-		padding-top: 70px;
-		padding-bottom: 70px;
+		padding-top: 30px;
+		padding-bottom: 0px;
 	}
 	.description_image {
 		min-height: 250px;
@@ -1868,25 +1946,35 @@ p {
 	.promo,
 	.contact,
 	.footer {
-		padding: 70px 0 50px;
+		padding: 30px 0 10px;
 	}
 	.price {
-		padding: 70px 0 20px;
+		padding: 30px 0 20px;
 	}
 	.gallery {
-		padding: 70px 0 0;
+		padding: 30px 0 0;
 	}
 	.video_preview {
-		padding: 70px 0 75px;
+		padding: 30px 0 25px;
 	}
 	.address {
-		padding: 70px 0 30px;
+		padding: 30px 0 10px;
 	}
 }
 @media screen and (max-width: 767px) {
+	.section-content	{
+		padding: 10px !important;
+	}
+	.client-logo {
+		width: 150px;
+		margin: 0 auto;
+	}
+	.address_title{
+		display: block
+	}
 	h3, 
 	.uk-h3 {
-		font-size: 32px;
+		font-size: 32px !important;
 		line-height: 36px;
 	}
 	h4, 
@@ -1894,14 +1982,19 @@ p {
 		font-size: 18px;
 		line-height: 23px;
 	}
+	.mid-size-text{
+		font-size: 24px !important;
+    	line-height: 23px;
+	}
 	.header .logo_link {
 		padding: 0;
 	}
-	.logo {
-		height: 40px;
+	.header-nav .logo {
+		height: 50px;
 	}
 	.header_navbar_mobile {
 		padding: 0;
+		margin-right: 15px;
 	}
 	.container {
 		display: block;
@@ -2079,6 +2172,7 @@ p {
 	}
 }
 
+
 /******* Animations *******/
 
 .animated {
@@ -2135,6 +2229,7 @@ p {
 	width: 100%;
 	height: 100%;
 	z-index: 2;
+	left: 0;
 }
 .header-nav{
 	transition: all .3s ease-in-out;
@@ -2143,10 +2238,6 @@ p {
 	-ms-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
 	height: 100px;
-}
-.header-nav .logo{
-	height: 100px;
-	transition: all .3s ease-in-out;
 }
 .header-nav.inverted{
 	background-color: white;
@@ -2175,12 +2266,7 @@ p {
 .header-main{
 	z-index: 4;
 }
-.client-logo{
-	width: 200px;
-}
-.client-logo img{
-	width: 100%;
-}
+
 .blytix-inverse-btn{
 	background-color: #200122;
 	color: white;
@@ -2205,7 +2291,11 @@ p {
 	overflow: hidden;
 }
 .description.small{
-	height: 380px !important;
+	height: 330px !important;
+	overflow: hidden;
+}
+.description.auto{
+	height: auto !important;
 	overflow: hidden;
 }
 .description.section .uk-grid{
@@ -2216,23 +2306,28 @@ p {
 	color: #200122;
 }
 
-.description.section.primary .uk-flex-middle{
+.description.section.primary .uk-flex-middle, .description.extend.primary .uk-flex-middle{
 	background-color: #da4a4a;
 }
-.description.section.primary .uk-flex-middle .description_title{
+.description.section.primary .uk-flex-middle .description_title,
+ .description.extend.primary .uk-flex-middle .description_title{
 	color: white;
 }
-.description.section.primary .uk-flex-middle .description_text{
+.description.section.primary .uk-flex-middle .description_text,
+.description.extend.primary .uk-flex-middle .description_text{
 	color: white;
 }
 
-.description.section.dark .uk-flex-middle{
+.description.section.dark .uk-flex-middle,
+.description.extend.dark .uk-flex-middle{
 	background-color: #200122;
 }
-.description.section.dark .uk-flex-middle .description_title{
+.description.section.dark .uk-flex-middle .description_title,
+.description.extend.dark .uk-flex-middle .description_title{
 	color: white;
 }
-.description.section.dark .uk-flex-middle .description_text{
+.description.section.dark .uk-flex-middle .description_text,
+.description.extend.dark .uk-flex-middle .description_text{
 	color: white;
 }
 
@@ -2254,6 +2349,14 @@ p {
 
 .inner-image-3{
 	background-image: url('../images/3.jpg'); 
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;;
+}
+
+.inner-image-4{
+	background-image: url('https://www.blossomacademy.co/static/images/imgpartner1.21bbe09c5802.jpeg'); 
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -2301,18 +2404,16 @@ p {
 }
 .hire-description h3{
 	color:  #200122;
-	font-size: 2.5em !important;
+	font-size: 2.5em;
 	text-align: center;
 	font-family: Proxima-bold;
 	max-width: 800px;
 	margin: 0 auto;
-	margin-top: 90px;
 }
 
 .hire-description .description_text{
-	width: 800px;
 	margin: 0 auto;
-	margin-top: 120px;
+	margin-top: 20px;
 }
 .wwd-overlay{
 	width: 100%;
@@ -2326,7 +2427,7 @@ p {
 }
 .mid-size-text{
 	color: 	#200122 !important;
-	font-size: 2.2em !important;
+	font-size: 2.2em;
 	margin-bottom: 30px;
 }
 .mid-size-text.red{
@@ -2349,6 +2450,11 @@ p {
 }
 .description_text.white{
 	color: white;
+}
+
+.description.hire{
+	/* height: 450px; */
+	overflow: hidden;
 }
 .wwd-normal{
 	font-family: Proxima;
@@ -2403,6 +2509,8 @@ p {
 	background-color: white;
 	padding: 20px;
 	cursor: pointer;
+	box-sizing: border-box;
+	margin-bottom: 20px;
 }
 .blytix-card:hover{
 	box-shadow: 2px 0px 16px gainsboro;
@@ -2430,54 +2538,6 @@ p {
 	text-align: center;
 	color: white;
 	line-height: 350px;
-}
-
-.header-banner.career{
-	height: 400px;
-	overflow: hidden;
-	background-color: white;
-	background: url('https://image.ibb.co/hC3ATG/w_dialog.jpg') no-repeat 0 0;
-	background-size: cover;
-	position: relative;
-	z-index: 5
-}
-.header-banner.career .overlay{
-	top: 0;
-	left: 0;
-	background-color: rgba(255, 255, 255, 0.603);
-	width: 100%;
-	height: 100%;
-}
-.header-banner.career .header-content{
-	background-color: white;
-	padding: 20px;
-	width: 400px;
-	height: 180px;
-	margin: 0 auto;
-	border-radius: 2px;
-	position: absolute;
-	z-index: 4;
-	left: 39%;
-	top: 145px;
-}
-
-.header-banner.career .header-content h3{
-	font-family: Proxima-bold;
-	font-size: 2.8em;
-	color: slategrey;
-	line-height: 80px;
-}
-
-.header-banner.career .header-content h5{
-	font-family: Proxima-thin;
-	font-size: 1.4em;
-	color: silver;
-	text-align: center;
-}
-
-.header-banner.career .header-content h5 a{
-	color: rgb(50, 156, 255);
-	font-weight: bold;
 }
 
 .modal[aria-hidden='true'] { display: none; }
@@ -2594,4 +2654,7 @@ p {
 .modal__btn-primary {
   background-color: rgb(37, 37, 37);;
   color: #fff;
+}
+.wwd-description{
+	padding: 20px
 }
