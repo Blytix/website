@@ -5,9 +5,10 @@ const cookieParser = require('cookie-parser')
 const nodemailer = require("nodemailer");
 const keys = require('./gkeys');
 const templateViews = require('./views/contactEmailTemplate')
+const jobTemplate = require('./views/jobApplicationTemplate')
 const alert = require('alert-node')
 
-const multer = require('multer');
+
 const showToast = require('show-toast');
 app.use(cookieParser())
 
@@ -20,8 +21,8 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs')
 app.use('/assets', express.static(__dirname + '/assets'));
 
-
-upload = multer({ dest: 'uploads/' })
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' })
 
 
 app.use('/faq', async (req, res, next) => {
@@ -56,13 +57,14 @@ app.use('/terms-of-service', async (req, res, next) => {
     res.render('terms')
 })
 
-app.use('/join_blytix', upload.single('file'), async (req, res, next) => {
-    console.log('file', req.file)
+app.use('/join_blytix', upload.single('cv_file'), async (req, res, next) => {
+    console.log('file', req.files)
     if (req.method == 'POST') {
         const name = req.body.name
         const email = req.body.email
         const country = req.body.country
         const phone = req.body.phone
+        const linkedin = req.body.linkedin
         const cv_file = req.files
 
         let transporter = nodemailer.createTransport({
@@ -78,32 +80,34 @@ app.use('/join_blytix', upload.single('file'), async (req, res, next) => {
             email,
             country,
             phone,
+            linkedin,
             cv_file
         }
         console.log('content', content)
 
-        // const html = templateViews.contactFormTemplate(content)
-        // let mailOptions = {
-        //     from: email,
-        //     to: "info@blytix.com",
-        //     subject: job_type,
-        //     html: html,
-        // };
+        const html = jobTemplate.jobApplicationTemplate(content)
+        let mailOptions = {
+            from: email,
+            to: ["info@blytix.com", " jeph@blytix.com"],
+            // to: ["fortune2test@gmail.com", "fortunetedegh@gmail.com"],
+            subject: "Application to work at Blytix",
+            html: html,
+        };
 
-        // transporter.sendMail(mailOptions, (error, success) => {
-        //     if (error) {
+        transporter.sendMail(mailOptions, (error, success) => {
+            if (error) {
 
-        //         _message = 'Error sending message'
-        //         console.log('error', error, _message)
-        //         alert(_message)
-        //     } else {
+                _message = 'Error sending message'
+                console.log('error', error, _message)
+                alert(_message)
+            } else {
 
-        //         _message = 'Message recieved and will get in touch soon'
-        //         console.log('success', success, _message)
-        //         alert(_message)
-        //     }
-        //     transporter.close();
-        // });
+                _message = 'Message recieved and will get in touch soon'
+                console.log('success', success, _message)
+                alert(_message)
+            }
+            transporter.close();
+        });
     }
 
 })
