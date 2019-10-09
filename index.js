@@ -56,6 +56,7 @@ app.use('/contact', async (req, res, next) => {
     if (req.method == 'POST') {
         const name = req.body.name
         const email = req.body.email
+        const company = req.body.company
         const phone = req.body.phone
         const job_type = req.body.job_type
         const message = req.body.message
@@ -72,6 +73,7 @@ app.use('/contact', async (req, res, next) => {
             name,
             email,
             message,
+            company,
             phone,
             job_type
         }

@@ -143,6 +143,10 @@ exports.contactFormTemplate = (context) => {
                                                         </p>
                                                         <p
                                                         style="font-size: 14px; line-height: 1.5; mso-line-height-alt: 21px; margin: 0;">
+                                                        Company: ${context.company}
+                                                        </p>
+                                                        <p
+                                                        style="font-size: 14px; line-height: 1.5; mso-line-height-alt: 21px; margin: 0;">
                                                         Job Type: I am looking for a ${context.job_type}
                                                         </p>
 												</div>
