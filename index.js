@@ -5,6 +5,8 @@ const cookieParser = require('cookie-parser')
 const nodemailer = require("nodemailer");
 const keys = require('./gkeys');
 const templateViews = require('./views/contactEmailTemplate')
+const alert = require('alert-node')
+
 
 const showToast = require('show-toast');
 app.use(cookieParser())
@@ -28,7 +30,7 @@ app.use('/career/data-engineer', async (req, res, next) => {
 app.use('/career/data-scientist', async (req, res, next) => {
     res.render('data-scientist')
 })
- 
+
 app.use('/careers', async (req, res, next) => {
     res.render('career')
 })
@@ -54,7 +56,8 @@ app.use('/contact', async (req, res, next) => {
     if (req.method == 'POST') {
         const name = req.body.name
         const email = req.body.email
-        const subject = req.body.subject
+        const phone = req.body.phone
+        const job_type = req.body.job_type
         const message = req.body.message
 
         let transporter = nodemailer.createTransport({
@@ -68,22 +71,30 @@ app.use('/contact', async (req, res, next) => {
         const content = {
             name,
             email,
-            message
+            message,
+            phone,
+            job_type
         }
+
         const html = templateViews.contactFormTemplate(content)
         let mailOptions = {
             from: email,
             to: email,
-            subject: subject,
+            subject: job_type,
             html: html,
         };
 
         transporter.sendMail(mailOptions, (error, success) => {
             if (error) {
-                console.log('')
+
                 _message = 'Error sending message'
+                console.log('error', error, _message)
+                alert(_message)
             } else {
+
                 _message = 'Message recieved and will get in touch soon'
+                console.log('success', success, _message)
+                alert(_message)
             }
             transporter.close();
         });
