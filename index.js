@@ -7,7 +7,7 @@ const keys = require('./gkeys');
 const templateViews = require('./views/contactEmailTemplate')
 const alert = require('alert-node')
 
-
+const multer = require('multer');
 const showToast = require('show-toast');
 app.use(cookieParser())
 
@@ -16,8 +16,26 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+
 app.set('view engine', 'ejs')
 app.use('/assets', express.static(__dirname + '/assets'));
+
+
+const storage = multer.diskStorage({
+  
+    destination: function (req, file, cb) {
+        console.log('storage')
+        cb(null, 'uploads')
+        
+    },
+    filename: function (req, file, cb) {
+        console.log('storage')
+        cb(null, file.fieldname + '-' + Date.now())
+    }
+})
+
+const upload = multer({ storage: storage })
+
 
 app.use('/faq', async (req, res, next) => {
     res.render('faq')
@@ -51,6 +69,58 @@ app.use('/terms-of-service', async (req, res, next) => {
     res.render('terms')
 })
 
+app.use('/join_blytix', upload.single('file'), async (req, res, next) => {
+    console.log('file', req.file)
+    if (req.method == 'POST') {
+        const name = req.body.name
+        const email = req.body.email
+        const country = req.body.country
+        const phone = req.body.phone
+        const cv_file = req.files
+
+        let transporter = nodemailer.createTransport({
+            service: 'Gmail',
+            auth: {
+                user: keys.baseMailTransporter.mail,
+                pass: keys.baseMailTransporter.pw
+            }
+        });
+
+        const content = {
+            name,
+            email,
+            country,
+            phone,
+            cv_file
+        }
+        console.log('content', content)
+
+        // const html = templateViews.contactFormTemplate(content)
+        // let mailOptions = {
+        //     from: email,
+        //     to: "info@blytix.com",
+        //     subject: job_type,
+        //     html: html,
+        // };
+
+        // transporter.sendMail(mailOptions, (error, success) => {
+        //     if (error) {
+
+        //         _message = 'Error sending message'
+        //         console.log('error', error, _message)
+        //         alert(_message)
+        //     } else {
+
+        //         _message = 'Message recieved and will get in touch soon'
+        //         console.log('success', success, _message)
+        //         alert(_message)
+        //     }
+        //     transporter.close();
+        // });
+    }
+
+})
+
 app.use('/contact', async (req, res, next) => {
     _message = ''
     if (req.method == 'POST') {
@@ -81,7 +151,7 @@ app.use('/contact', async (req, res, next) => {
         const html = templateViews.contactFormTemplate(content)
         let mailOptions = {
             from: email,
-            to: "info@blytix.com",
+            to: ["info@blytix.com", " jeph@blytix.com"],
             subject: job_type,
             html: html,
         };
