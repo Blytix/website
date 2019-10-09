@@ -81,7 +81,7 @@ app.use('/contact', async (req, res, next) => {
         const html = templateViews.contactFormTemplate(content)
         let mailOptions = {
             from: email,
-            to: email,
+            to: "info@blytix.com",
             subject: job_type,
             html: html,
         };
