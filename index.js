@@ -21,20 +21,7 @@ app.set('view engine', 'ejs')
 app.use('/assets', express.static(__dirname + '/assets'));
 
 
-const storage = multer.diskStorage({
-  
-    destination: function (req, file, cb) {
-        console.log('storage')
-        cb(null, 'uploads')
-        
-    },
-    filename: function (req, file, cb) {
-        console.log('storage')
-        cb(null, file.fieldname + '-' + Date.now())
-    }
-})
-
-const upload = multer({ storage: storage })
+upload = multer({ dest: 'uploads/' })
 
 
 app.use('/faq', async (req, res, next) => {
@@ -152,6 +139,7 @@ app.use('/contact', async (req, res, next) => {
         let mailOptions = {
             from: email,
             to: ["info@blytix.com", " jeph@blytix.com"],
+            // to: ["fortunetedegh@gmail.com", " fortune2test@gmail.com"],
             subject: job_type,
             html: html,
         };

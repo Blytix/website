@@ -156,7 +156,7 @@ exports.contactFormTemplate = (context) => {
 												style="padding-right: 0px;padding-left: 0px;">
 												<!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px"><td style="padding-right: 0px;padding-left: 0px;" align="center"><![endif]--><img
 													align="center" alt="Image" border="0" class="center fixedwidth"
-													src="https://frameworxsoftware.com/wp-content/uploads/2018/07/hand-shake-1024x683.jpg"
+													src="https://res.cloudinary.com/memorystreams/image/upload/v1570639034/WhatsApp_Image_2019-10-09_at_4.24.58_PM_micvsn.jpg"
 													style="text-decoration: none; -ms-interpolation-mode: bicubic; border: 0; height: auto; width: 100%; max-width: 530px; display: block;"
 													title="Image" width="530" />
 											</div>
@@ -248,19 +248,5 @@ exports.contactFormTemplate = (context) => {
 	<!--[if (IE)]></div><![endif]-->
 </body>    
     `
-
-
-
-
-    // `
-    //     <div style="${firstDiv}">
-    //         <div style="padding: 10px">
-    //             <p>${context.message}</p>    
-    //             <br />
-    //             <p>Again my name is ${context.name}, you can contact me on ${context.email} </p>
-    //         </div>
-
-    //     </div>
-    // `
     return html
 }
