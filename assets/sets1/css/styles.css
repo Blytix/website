@@ -398,7 +398,7 @@ p {
 }
 .container_description {
 	position: relative;
-	max-width: 700px;
+	/* max-width: 700px; */
 	font-size: 18px;
 	line-height: 23px;
     font-family: Proxima-thin, sans-serif;
