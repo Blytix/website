@@ -27,7 +27,7 @@
                                         placeholder="Phone Number">
                                 </div>
                                 <div class="uk-width-small-1-1 uk-margin-bottom" >
-                                        <select name="professionals_type" class="uk-width-1-1 uk-text-contrast form_input" required >
+                                        <select name="job_type" class="uk-width-1-1 uk-text-contrast form_input" required >
                                             <option style="color: black" value="On-demand analytics professional">On-demand analytics professional</option>
                                             <option style="color: black" value="Full time analytics professional">Full time analytics professional</option>
                                             <option style="color: black" value="Team of analytics professionals">Team of analytics professionals</option>
@@ -63,7 +63,7 @@
                           <button class="modal__close" aria-label="Close modal" aria-controls="modal__container1" data-micromodal-close></button>
                         </header>
                         <main class="modal__content" id="modal-1-content">
-                            <form action="/contact" method="POST" class="uk-form form_send_message" autocomplete="off">
+                            <form action="/join_blytix" method="post" enctype="multipart/form-data" class="uk-form form_send_message" autocomplete="off">
                                 <div
                                     class="uk-grid uk-grid-small uk-container-center uk-margin-bottom">
                                     <div class="uk-width-small-1-1 uk-margin-bottom">
@@ -86,10 +86,10 @@
                                         <input name="linkedin" placeholder="LinkedIn Profile" class="uk-width-1-1 uk-text-contrast form_input" required>
                                     </div>
                                     <div class="uk-width-small-1-1 uk-margin-bottom">
-                                        <input type="file" id="cv_box" required style="display: none">
-                                        <label for="cv_box" class="cv-upload-box">
+                                        <input type="file" name="cv_file" id="cv_box" required  accept=".pdf">
+                                        <!-- <label for="cv_box" class="cv-upload-box">
                                             <div><i class="ion-ios-attach"></i> ATTACH RESUME / CV</div>
-                                        </label>
+                                        </label> -->
                                     </div>
                                     <div class="uk-margin-bottom uk-width-1-1">
                                         <button class="uk-button button_custom_green blytix-inverse-btn form_button" type="submit">Contact Us</button>
