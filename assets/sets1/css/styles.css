@@ -1344,6 +1344,7 @@ p {
 .header-nav .logo{
 	height: 100px;
 	transition: all .3s ease-in-out;
+	margin-top: 10px;
 }
 
 .client-logo{
