@@ -305,7 +305,7 @@ p {
     height: 40px;
     line-height: 40px;
     border-radius: 3px;
-    font-weight: bold;
+    font-family: Proxima-bold;
 }
 .uk-navbar-nav > li >
 .header.active .uk-navbar-nav > li > a {
@@ -2508,6 +2508,24 @@ p {
 .blytix-bg-red{
 	background-color: #da4a4a;
 	padding: 30px;
+}
+.blytix-bg-white{
+	background-color: white;
+	padding: 30px;
+}
+.blytix-bg-white h3{
+	color: #da4a4a !important;
+}
+.blytix-bg-white .icon{
+	border-color: #da4a4a !important;
+	color: #da4a4a !important;
+}
+.blytix-bg-white .accordion{
+	color: #da4a4a !important;
+}
+.blytix-bg-white .panel p {
+    color: #da4a4a !important;;
+    border-left: 3px solid #da4a4a !important;;
 }
 .blytix-card{
 	background-color: white;
