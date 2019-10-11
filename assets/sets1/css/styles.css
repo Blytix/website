@@ -1870,9 +1870,9 @@ p {
 	}
 }
 @media screen and (max-width: 959px) {
-	.about-image-text{
+	/* .about-image-text{
 		color: #fafafa;
-	}
+	} */
 	.header-banner.career .header-content{
 		width: 90%;
 		left: 0;
