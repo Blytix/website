@@ -20,18 +20,18 @@
 <body data-ng-app="myPage" data-ng-controller="myPageCtrl">
 
     <div class="wrapper">
-        <%- include("partials/header", {navbar: false, anchor: false}) %>  
+        <%- include("partials/header", {navbar: false, anchor: false}) %>
 
-        <section
-            style="height: fit-content; background: url(/assets/sets1/images/about_banner.jpg) no-repeat 0 0; background-size: cover;"
+        <section id="mainImage"
+            style="height: fit-content; background: url(/assets/sets1/images/about_banner.jpg) no-repeat 0 0; background-size: 1353px;  background-position-x: 0px; background-position-y: center; ;"
             class="uk-height-viewport uk-cover-background uk-position-relative uk-flex uk-flex-middle uk-overflow-hidden grey_overlay container">
             <div
                 class="uk-container uk-container-center uk-width-1-1 uk-text-center uk-position-relative container_block">
 
-                <div class="container_block" style="text-align: center;"  >
-                    <h1 class="uk-h1 container_title" >Not Just Forward-Thinking — Future-Thinking.
+                <div class="container_block" style="text-align: center;">
+                    <h1 class="uk-h1 container_title">Not Just Forward-Thinking — Future-Thinking.
                     </h1>
-                    <h2 class="uk-h2 container_subtitle"  ></h2>
+                    <h2 class="uk-h2 container_subtitle"></h2>
                     <div class="container_description wwd-normal">
                         At Blytix, we don’t just see the future of business and analytics — we’re creating it.
                     </div>
@@ -39,8 +39,9 @@
 
             </div>
         </section>
-        <section class="wwd-description uk-padding-large" >
-            <div class="uk-container uk-container-center uk-text-center uk-margin-large-top uk-margin-large-bottom" data-uk-scrollspy="{cls:'uk-active'}">
+        <section class="wwd-description uk-padding-large">
+            <div class="uk-container uk-container-center uk-text-center uk-margin-large-top uk-margin-large-bottom"
+                data-uk-scrollspy="{cls:'uk-active'}">
                 <h4 class="mid-size-text wwd-normal">
                     Advancing Talent and Technologies.</h4>
                 <div class="uk-grid uk-grid-large address_wrapper">
@@ -55,8 +56,7 @@
         </section>
 
         <section class="description extend uk-position-relative"
-            style="background-color: #e3eaed; background-size: cover; background-position-y: -160px; background-image: url(/assets/sets1/images/ambassadors.jpg)"
-             >
+            style="background-color: #e3eaed; background-size: cover; background-position-y: -160px; background-image: url(/assets/sets1/images/ambassadors.jpg)">
             <div class="section-content">
                 <div class="uk-grid uk-grid-collapse uk-position-relative uk-padding-large">
                     <div class="uk-width-large-1-2 uk-flex uk-flex-middle about-content">
@@ -65,8 +65,8 @@
                         <div class="uk-container description_block" data-uk-scrollspy="{cls:'uk-active'}"
                             style="height: 500px;">
                             <h3 class="uk-h3 uk-margin-large-bottom animated description_title mid-size-text white">
-                                    Our Principles Define Us and Our Work</h3>
-                                
+                                Our Principles Define Us and Our Work</h3>
+
                             <h3 class="uk-h3 uk-margin-large-bottom animated wwd-normal small-size-text white">Our
                                 Mission</h3>
                             <p class="animated description_text wwd-normal about-image-text white">
@@ -75,12 +75,15 @@
                             <h3 class="uk-h3 uk-margin-large-bottom animated deco wwd-normal small-size-text white">
                                 Our Vision</h3>
                             <p class="animated description_text wwd-normal about-image-text white">
-                                To inspire African Youth to realize their full potential and connect them to diverse economic opportunities around the world. We believe that 
-                                the best algorithms and tools will be built by those who are exposed to different market conditions, who find inspiration in their work, and 
-                                who seek to collaborate with equally passionate colleagues in an exciting career landscape. By leveling the playing field, 
+                                To inspire African Youth to realize their full potential and connect them to diverse
+                                economic opportunities around the world. We believe that
+                                the best algorithms and tools will be built by those who are exposed to different market
+                                conditions, who find inspiration in their work, and
+                                who seek to collaborate with equally passionate colleagues in an exciting career
+                                landscape. By leveling the playing field,
                                 we aspire to shape a world with less disparity and more prosperity.
                             </p>
-    
+
                         </div>
                     </div>
                 </div>
@@ -89,7 +92,8 @@
         </section>
 
         <section class="section">
-            <div class="uk-container uk-container-center uk-text-center uk-margin-large-top uk-margin-large-bottom " data-uk-scrollspy="{cls:'uk-active'}">
+            <div class="uk-container uk-container-center uk-text-center uk-margin-large-top uk-margin-large-bottom "
+                data-uk-scrollspy="{cls:'uk-active'}">
                 <h4 class="mid-size-text">
                     Join Blytix and Move Ahead.</h4>
                 <div class="uk-grid uk-grid-large address_wrapper">
@@ -101,7 +105,8 @@
                 </div>
                 <div class="uk-position-relative uk-margin-large-bottom uk-width-1-1 container_button">
                     <a href="/careers">
-                        <div class="uk-button uk-border-rounded blytix-inverse-btn container_button_message">Careers</div>
+                        <div class="uk-button uk-border-rounded blytix-inverse-btn container_button_message">Careers
+                        </div>
                     </a>
                 </div>
             </div>
@@ -142,20 +147,32 @@
     <% include partials/modal %>
 
     <style>
-       .about-overlay{
-           position: absolute;
-           top: 0;
-           left: 0;
-           background-color: rgba(0, 0, 0, 0.301);
-           width: 100%;
-           height: 100%;
-           z-index: 3;
-       }
-       .about-content{
+        .about-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.301);
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+        }
+
+        .about-content {
             position: relative;
             z-index: 5;
-       }
+        }
+    </style>
+    <style>
+        @media all and (max-width:600px) {
+            #mainImage {
+                background-size: cover !important;
+                background-position-x: 0px !important;
+            }
+        }
     </style>
 
+
+
     <% include partials/scripts %>
+
 </html>
