@@ -305,7 +305,7 @@ p {
     height: 40px;
     line-height: 40px;
     border-radius: 3px;
-    font-weight: bold;
+    font-family: Proxima-bold;
 }
 .uk-navbar-nav > li >
 .header.active .uk-navbar-nav > li > a {
@@ -328,12 +328,12 @@ p {
 .header-banner.career .overlay{
 	top: 0;
 	left: 0;
-	background-color: rgba(255, 255, 255, 0.603);
+	background-color: transparent;
 	width: 100%;
 	height: 100%;
 }
 .header-banner.career .header-content{
-	background-color: white;
+	background-color: transparent;
 	padding: 20px;
 	width: 400px;
 	height: 180px;
@@ -348,19 +348,19 @@ p {
 .header-banner.career .header-content h3{
 	font-family: Proxima-bold;
 	font-size: 2.8em;
-	color: slategrey;
+	color: white;
 	line-height: 80px;
 }
 
 .header-banner.career .header-content h5{
 	font-family: Proxima-thin;
 	font-size: 1.4em;
-	color: silver;
+	color: white;
 	text-align: center;
 }
 
 .header-banner.career .header-content h5 a{
-	color: rgb(50, 156, 255);
+	color: white;
 	font-weight: bold;
 }
 
@@ -398,7 +398,7 @@ p {
 }
 .container_description {
 	position: relative;
-	max-width: 700px;
+	/* max-width: 700px; */
 	font-size: 18px;
 	line-height: 23px;
     font-family: Proxima-thin, sans-serif;
@@ -1344,6 +1344,7 @@ p {
 .header-nav .logo{
 	height: 100px;
 	transition: all .3s ease-in-out;
+	margin-top: 10px;
 }
 
 .client-logo{
@@ -1869,9 +1870,9 @@ p {
 	}
 }
 @media screen and (max-width: 959px) {
-	.about-image-text{
+	/* .about-image-text{
 		color: #fafafa;
-	}
+	} */
 	.header-banner.career .header-content{
 		width: 90%;
 		left: 0;
@@ -2259,7 +2260,7 @@ p {
 	position: absolute;
 	z-index: 10;
 	width: 100%;
-	height: calc( 100% + 100px);
+	height: calc( 100% + 70px);
 	background: #200122d3; /* fallback for old browsers */
   	background: -webkit-linear-gradient(to right, #200122, #ff4b4bc2); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #200122, #ff4b4bc2);
@@ -2335,7 +2336,7 @@ p {
 }
 
 .inner-image-1{
-	background-image: url('../images/1.jpg'); 
+	background-image: url('../images/homepage-image-1.JPG'); 
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -2359,7 +2360,7 @@ p {
 }
 
 .inner-image-4{
-	background-image: url('https://www.blossomacademy.co/static/images/imgpartner1.21bbe09c5802.jpeg'); 
+	background-image: url('../images/hire-image-1.jpg'); 
 	background-size: cover;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -2507,6 +2508,24 @@ p {
 .blytix-bg-red{
 	background-color: #da4a4a;
 	padding: 30px;
+}
+.blytix-bg-white{
+	background-color: white;
+	padding: 30px;
+}
+.blytix-bg-white h3{
+	color: #da4a4a !important;
+}
+.blytix-bg-white .icon{
+	border-color: #da4a4a !important;
+	color: #da4a4a !important;
+}
+.blytix-bg-white .accordion{
+	color: #da4a4a !important;
+}
+.blytix-bg-white .panel p {
+    color: #da4a4a !important;;
+    border-left: 3px solid #da4a4a !important;;
 }
 .blytix-card{
 	background-color: white;

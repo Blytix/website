@@ -1,115 +1,58 @@
 <header class="uk-small-hidden header">
-    <% if(navbar){ %>
-        <nav class="uk-navbar header-nav inverted fixed">
-            <div class="uk-container uk-container-center">
-                <a href="/" class="uk-navbar-brand logo_link">
+    <nav class="uk-navbar header-nav">
+        <div class="uk-container uk-container-center">
+            <a href="/" class="uk-navbar-brand logo_link">
 
-                    <img class="uk-responsive-height logo" src="/assets/sets1/images/logo.png">
-                </a>
-                <div class="uk-navbar-flip uk-visible-large">
-                    <ul class="uk-navbar-nav header-nav-list">
-                        <li class="header_nav_list_item">
-                            <a class="link_features header_nav_list_item_link"
-                                href="/hire-analytics-talent">
-                                <div class="nav-link">Hire Analytics Talents</div>
-                            </a>
-                        </li>
-                        <li class="header_nav_list_item">
-                            <a class="link_offer header_nav_list_item_link" 
-                                href="/what-we-do">
-                                <div class="nav-link">What We do</div>
-                            </a>
-                        </li>
-                        <li class="header_nav_list_item">
-                            <a class="link_pricing header_nav_list_item_link" 
-                                href="/about">
-                                <div class="nav-link">About Us</div>
-                            </a>
-                        </li>
-                        <li class="header_nav_list_item">
-                            <a class="link_clients header_nav_list_item_link"
-                                href="/contact">
-                                <div class="nav-link">Contact Us</div>
-                            </a>
-                        </li>
-                        <li class="header_nav_list_item">
-                            <a class="link_clients header_nav_list_item_link">
-                                <div class="nav-btn" data-micromodal-trigger="modal-1">
-                                    Hire Talent
-                                </div>
-                            </a>
-                        </li>
-                        <li class="header_nav_list_item">
-                            <a class="link_clients header_nav_list_item_link">
-                                <div class="nav-btn" data-micromodal-trigger="modal-2">
-                                    Join Blytix
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="uk-navbar-flip uk-hidden-large header_navbar_mobile_block">
-                    <div data-ng-click="toggleMobileNav($event)" class="uk-navbar-toggle header_navbar_mobile">
-                    </div>
+                <img class="uk-responsive-height logo" src="/assets/sets1/images/logo.png">
+            </a>
+            <div class="uk-navbar-flip uk-visible-large">
+                <ul class="uk-navbar-nav header-nav-list">
+                    <li class="header_nav_list_item">
+                        <a class="link_features header_nav_list_item_link"
+                            href="/hire-analytics-talent">
+                            <div class="nav-link">Hire Analytics Talents</div>
+                        </a>
+                    </li>
+                    <li class="header_nav_list_item">
+                        <a class="link_offer header_nav_list_item_link" 
+                            href="/what-we-do">
+                            <div class="nav-link">What We do</div>
+                        </a>
+                    </li>
+                    <li class="header_nav_list_item">
+                        <a class="link_pricing header_nav_list_item_link" 
+                            href="/about">
+                            <div class="nav-link">About Us</div>
+                        </a>
+                    </li>
+                    <li class="header_nav_list_item">
+                        <a class="link_clients header_nav_list_item_link"
+                            href="/contact">
+                            <div class="nav-link">Contact Us</div>
+                        </a>
+                    </li>
+                    <li class="header_nav_list_item">
+                        <a class="link_clients header_nav_list_item_link">
+                            <div class="nav-btn" data-micromodal-trigger="modal-1">
+                                Hire Talent
+                            </div>
+                        </a>
+                    </li>
+                    <li class="header_nav_list_item">
+                        <a class="link_clients header_nav_list_item_link">
+                            <div class="nav-btn" data-micromodal-trigger="modal-2">
+                                Join Blytix
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="uk-navbar-flip uk-hidden-large header_navbar_mobile_block">
+                <div data-ng-click="toggleMobileNav($event)" class="uk-navbar-toggle header_navbar_mobile">
                 </div>
             </div>
-        </nav>
-    <% } else{ %>  
-        <nav class="uk-navbar header-nav">
-                <div class="uk-container uk-container-center">
-                    <a href="/" class="uk-navbar-brand logo_link">
-    
-                        <img class="uk-responsive-height logo" src="/assets/sets1/images/logo.png">
-                    </a>
-                    <div class="uk-navbar-flip uk-visible-large">
-                        <ul class="uk-navbar-nav header-nav-list">
-                            <li class="header_nav_list_item">
-                                <a class="link_features header_nav_list_item_link"
-                                    href="/hire-analytics-talent">
-                                    <div class="nav-link">Hire Analytics Talents</div>
-                                </a>
-                            </li>
-                            <li class="header_nav_list_item">
-                                <a class="link_offer header_nav_list_item_link" 
-                                    href="/what-we-do">
-                                    <div class="nav-link">What We do</div>
-                                </a>
-                            </li>
-                            <li class="header_nav_list_item">
-                                <a class="link_pricing header_nav_list_item_link" 
-                                    href="/about">
-                                    <div class="nav-link">About Us</div>
-                                </a>
-                            </li>
-                            <li class="header_nav_list_item">
-                                <a class="link_clients header_nav_list_item_link"
-                                    href="/contact">
-                                    <div class="nav-link">Contact Us</div>
-                                </a>
-                            </li>
-                            <li class="header_nav_list_item">
-                                <a class="link_clients header_nav_list_item_link">
-                                    <div class="nav-btn" data-micromodal-trigger="modal-1">
-                                        Hire Talent
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="header_nav_list_item">
-                                <a class="link_clients header_nav_list_item_link">
-                                    <div class="nav-btn" data-micromodal-trigger="modal-2">
-                                        Join Blytix
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="uk-navbar-flip uk-hidden-large header_navbar_mobile_block">
-                        <div data-ng-click="toggleMobileNav($event)" class="uk-navbar-toggle header_navbar_mobile">
-                        </div>
-                    </div>
-                </div>
-            </nav>
-    <% } %>
+        </div>
+    </nav>
 
     <% if(anchor){ %>
         <nav class="header-page-anchor hide">
