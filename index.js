@@ -42,7 +42,8 @@ async function sendMail(content, EmailTemplate, Subject){
 }
 
 async function SafeToSend(data){
-    var keywords = ['sex', 'dating', 'girls', 'women', 'health', 'cup', 'kitchen', 'earn', 'won', 'cash', 'free']
+    var keywords = ['sex', 'dating', 'girls', 'women', 'health', 'cup', 'kitchen', 'earn', 'won', 'cash', 'free', 'Income', 'storу', 'eаrnings', 'wееk',
+                     '84742529663', '81287794435', '89714688817', '86486667222', '86763962272', '82987153976', '$', '€', '£']
     try {
         for (var key in data) {
             if (data.hasOwnProperty(key)) {
