@@ -8,15 +8,63 @@ const templateViews = require('./views/contactEmailTemplate')
 const jobTemplate = require('./views/jobApplicationTemplate')
 const alert = require('alert-node')
 
+async function sendMail(content, EmailTemplate, Subject){
+        
+    let transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: keys.baseMailTransporter.mail,
+            pass: keys.baseMailTransporter.pw
+        }
+    });
 
-const showToast = require('show-toast');
+    const html = await EmailTemplate(content)
+    let mailOptions = {
+        from: "blossomapplicants@gmail.com",
+        to: ["info@blytix.com", " jeph@blytix.com"],
+        subject: Subject,
+        html: html,
+    };
+
+    transporter.sendMail(mailOptions, (error, success) => {
+        if (error) {
+            _message = 'Error sending message'
+            console.log('error', error, _message)
+
+            return false
+        } else {
+
+            _message = 'Message recieved and will get in touch soon'
+            console.log('success', success, _message)
+            return true
+        }
+    });
+    transporter.close();
+}
+
+async function SafeToSend(data){
+    var keywords = ['sex', 'dating', 'girls', 'earn', 'won', 'cash', 'free']
+    for (var key in data) {
+        if (data.hasOwnProperty(key)) {
+            keywords.forEach(keyword => {
+                var keywordRegex = new RegExp("(^| +)" + keyword + "( +|[.])", "i");
+                var keywordFound = keywordRegex.test(data[key]);
+                if (keywordFound) {
+                  return false
+                } else {
+                  return true
+                }
+            })
+        }
+      }
+}
+
 app.use(cookieParser())
 
 app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(bodyParser.json());
-
 
 app.set('view engine', 'ejs')
 app.use('/assets', express.static(__dirname + '/assets'));
@@ -60,54 +108,21 @@ app.use('/terms-of-service', async (req, res, next) => {
 app.use('/join_blytix', upload.single('cv_file'), async (req, res, next) => {
     console.log('file', req.files)
     if (req.method == 'POST') {
-        const name = req.body.name
-        const email = req.body.email
-        const country = req.body.country
-        const phone = req.body.phone
-        const linkedin = req.body.linkedin
-        const cv_file = req.files
-
-        let transporter = nodemailer.createTransport({
-            service: 'Gmail',
-            auth: {
-                user: keys.baseMailTransporter.mail,
-                pass: keys.baseMailTransporter.pw
-            }
-        });
-
-        const content = {
-            name,
-            email,
-            country,
-            phone,
-            linkedin,
-            cv_file
+        const data = {
+            name : req.body.name,
+            email : req.body.email,
+            country : req.body.country,
+            phone : req.body.phone,
+            linkedin : req.body.linkedin,
+            cv_file : req.files
         }
-        console.log('content', content)
 
-        const html = jobTemplate.jobApplicationTemplate(content)
-        let mailOptions = {
-            from: email,
-            to: ["info@blytix.com", " jeph@blytix.com"],
-            // to: ["fortune2test@gmail.com", "fortunetedegh@gmail.com"],
-            subject: "Application to work at Blytix",
-            html: html,
-        };
+        var template = jobTemplate.jobApplicationTemplate
 
-        transporter.sendMail(mailOptions, (error, success) => {
-            if (error) {
-
-                _message = 'Error sending message'
-                console.log('error', error, _message)
-                alert(_message)
-            } else {
-
-                _message = 'Message recieved and will get in touch soon'
-                console.log('success', success, _message)
-                alert(_message)
-            }
-            transporter.close();
-        });
+        var safe = await SafeToSend(data)
+        if(safe){
+            sendMail(data, template, "Application to work at Blytix")
+        }
     }
 
 })
@@ -115,53 +130,21 @@ app.use('/join_blytix', upload.single('cv_file'), async (req, res, next) => {
 app.use('/contact', async (req, res, next) => {
     _message = ''
     if (req.method == 'POST') {
-        const name = req.body.name
-        const email = req.body.email
-        const company = req.body.company
-        const phone = req.body.phone
-        const job_type = req.body.job_type
-        const message = req.body.message
-
-        let transporter = nodemailer.createTransport({
-            service: 'Gmail',
-            auth: {
-                user: keys.baseMailTransporter.mail,
-                pass: keys.baseMailTransporter.pw
-            }
-        });
-
-        const content = {
-            name,
-            email,
-            message,
-            company,
-            phone,
-            job_type
+        const data = {
+             name : req.body.name,
+             email : req.body.email,
+             company : req.body.company,
+             phone : req.body.phone,
+             job_type : req.body.job_type,
+             message : req.body.message
         }
 
-        const html = templateViews.contactFormTemplate(content)
-        let mailOptions = {
-            from: email,
-            to: ["info@blytix.com", " jeph@blytix.com"],
-            // to: ["fortunetedegh@gmail.com", " fortune2test@gmail.com"],
-            subject: job_type,
-            html: html,
-        };
+        var template = jobTemplate.contactFormTemplate
 
-        transporter.sendMail(mailOptions, (error, success) => {
-            if (error) {
-
-                _message = 'Error sending message'
-                console.log('error', error, _message)
-                alert(_message)
-            } else {
-
-                _message = 'Message recieved and will get in touch soon'
-                console.log('success', success, _message)
-                alert(_message)
-            }
-            transporter.close();
-        });
+        var safe = await SafeToSend(data)
+        if(safe){
+            sendMail(data, template, data.job_type)
+        }
     }
     res.render('contact')
 })
