@@ -6,7 +6,6 @@ const nodemailer = require("nodemailer");
 const keys = require('./gkeys');
 const templateViews = require('./views/contactEmailTemplate')
 const jobTemplate = require('./views/jobApplicationTemplate')
-const alert = require('alert-node')
 
 async function sendMail(content, EmailTemplate, Subject){
         
@@ -43,7 +42,7 @@ async function sendMail(content, EmailTemplate, Subject){
 }
 
 async function SafeToSend(data){
-    var keywords = ['sex', 'dating', 'girls', 'earn', 'won', 'cash', 'free']
+    var keywords = ['sex', 'dating', 'girls', 'women', 'health', 'cup', 'kitchen', 'earn', 'won', 'cash', 'free']
     for (var key in data) {
         if (data.hasOwnProperty(key)) {
             keywords.forEach(keyword => {
@@ -139,7 +138,7 @@ app.use('/contact', async (req, res, next) => {
              message : req.body.message
         }
 
-        var template = jobTemplate.contactFormTemplate
+        var template = templateViews.contactFormTemplate
 
         var safe = await SafeToSend(data)
         if(safe){
