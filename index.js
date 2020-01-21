@@ -43,19 +43,23 @@ async function sendMail(content, EmailTemplate, Subject){
 
 async function SafeToSend(data){
     var keywords = ['sex', 'dating', 'girls', 'women', 'health', 'cup', 'kitchen', 'earn', 'won', 'cash', 'free']
-    for (var key in data) {
-        if (data.hasOwnProperty(key)) {
-            keywords.forEach(keyword => {
-                var keywordRegex = new RegExp("(^| +)" + keyword + "( +|[.])", "i");
-                var keywordFound = keywordRegex.test(data[key]);
-                if (keywordFound) {
-                  return false
-                } else {
-                  return true
-                }
-            })
-        }
-      }
+    try {
+        for (var key in data) {
+            if (data.hasOwnProperty(key)) {
+                keywords.forEach(keyword => {
+                    var keywordRegex = new RegExp("(^| +)" + keyword + "( +|[.])", "i");
+                    var keywordFound = keywordRegex.test(data[key]);
+                    console.log(`${keyword} => ${data[key]}`, keywordFound)
+                    if (keywordFound) {
+                      return false
+                    } 
+                })
+                return true
+            }
+          }
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 app.use(cookieParser())
@@ -141,6 +145,7 @@ app.use('/contact', async (req, res, next) => {
         var template = templateViews.contactFormTemplate
 
         var safe = await SafeToSend(data)
+        console.log(safe)
         if(safe){
             sendMail(data, template, data.job_type)
         }
