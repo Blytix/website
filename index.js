@@ -21,7 +21,7 @@ async function sendMail(content, EmailTemplate, Subject){
     const html = await EmailTemplate(content)
     let mailOptions = {
         from: "blossomanalyticsleads@gmail.com",
-        to: ["info@blytix.com", " jeph@blytix.com"],
+        to: ["info@blytix.com", "jeph@blytix.com"],
         subject: Subject,
         html: html,
     };
