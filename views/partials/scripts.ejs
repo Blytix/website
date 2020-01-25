@@ -15,3 +15,42 @@
     <script>
         MicroModal.init();
     </script>
+
+     <script>
+        document.getElementById('contact-us').addEventListener('submit', runVerify)
+
+		function runVerify(e){
+			e.preventDefault();
+			runcaptcha();
+		}
+
+        function runcaptcha(){
+            grecaptcha.execute('6LeyltIUAAAAALMGbnV6dXasWWQNy9MhVE0tFGwi', {action: 'contact'}).then(function(token) {
+                const fullname = document.querySelector('#name').value;
+                const company = document.querySelector('#company').value
+                const email = document.querySelector('#email').value
+                const phone = document.querySelector('#phone').value
+                const job = document.querySelector('#job').value
+                const message = document.querySelector('#message').value
+
+                const captcha = token
+
+                sendData(fullname, company, email, phone, job, message, captcha)
+            });
+        }
+
+        function sendData(name, company, email, phone, job_type, message, captcha){
+            const info = JSON.stringify({name, company, email, phone, job_type, message, captcha})
+
+            fetch('/contact', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-type':  'application/json'
+                },
+                body: info
+            }).then((res) => res.json())
+            .then((data) => {})
+                
+        }
+    </script>

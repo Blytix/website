@@ -6,6 +6,8 @@ const nodemailer = require("nodemailer");
 const keys = require('./gkeys');
 const templateViews = require('./views/contactEmailTemplate')
 const jobTemplate = require('./views/jobApplicationTemplate')
+const siteSecret = '6LeyltIUAAAAAGD9sb6G6fzhlbFR0NIHiC92M6qa'
+const axios = require("axios");
 
 async function sendMail(content, EmailTemplate, Subject){
         
@@ -41,27 +43,23 @@ async function sendMail(content, EmailTemplate, Subject){
     transporter.close();
 }
 
-async function SafeToSend(data){
-    var keywords = ['sex', 'dating', 'girls', 'women', 'health', 'cup', 'kitchen', 'earn', 'won', 'cash', 'free', 'income', 
-                    'passive','internet', 'storу', 'eаrnings', 'money',
-                     '84742529663', '81287794435', '89714688817', '86486667222', '86763962272', '82987153976', '$', '€', '£']
-    try {
-        for (var key in data) {
-            if (data.hasOwnProperty(key)) {
-                keywords.forEach(keyword => {
-                    var keywordRegex = new RegExp("(^| +)" + keyword + "( +|[.,\/#!$%\^&\*;:{}=\-_`~()])", "i");
-                    var keywordFound = keywordRegex.test(data[key]);
-                    console.log(`${keyword} => ${data[key]}`, keywordFound)
-                    if (keywordFound) {
-                      return false
-                    } 
-                })
-                return true
-            }
-          }
-    } catch (error) {
-        console.log(error)
+async function SafeToSend(data){ 
+    if(!data.captcha){
+        return false
     }
+
+    const verifyUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${siteSecret}&response=${data.captcha}`;
+
+    try {
+        const response = await axios.get(verifyUrl);
+        const body = response.data;
+        if(!body.success || body.score < 0.5){
+            return false;
+        }
+        return true
+      } catch (error) {
+        console.log(error);
+      }
 }
 
 app.use(cookieParser())
@@ -146,7 +144,7 @@ app.use('/contact', async (req, res, next) => {
 
         var template = templateViews.contactFormTemplate
 
-        var safe = await SafeToSend(data)
+        var safe = await SafeToSend(req.body)
         console.log(safe)
         if(safe){
             sendMail(data, template, data.job_type)
